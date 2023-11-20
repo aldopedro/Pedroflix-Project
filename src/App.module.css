@@ -1,0 +1,190 @@
+@font-face {
+  font-display:optional;
+  font-family:Netflix Sans;
+  font-weight:100;
+  src:url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Th.woff2) format("woff2"),
+  url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Th.woff) format("woff")
+}
+@font-face {
+  font-display:optional;
+  font-family:Netflix Sans;
+  font-weight:300;
+  src:url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Lt.woff2) format("woff2"),
+  url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Lt.woff) format("woff")
+}
+@font-face {
+  font-display:optional;
+  font-family:Netflix Sans;
+  font-weight:400;
+  src:url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Rg.woff2) format("woff2"),
+  url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Rg.woff) format("woff")
+}
+@font-face {
+  font-display:optional;
+  font-family:Netflix Sans;
+  font-weight:500;
+  src:url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Md.woff2) format("woff2"),
+  url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Md.woff) format("woff")
+}
+@font-face {
+  font-display:optional;
+  font-family:Netflix Sans;
+  font-weight:700;
+  src:url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Bd.woff2) format("woff2"),
+  url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Bd.woff) format("woff")
+}
+@font-face {
+  font-display:optional;
+  font-family:Netflix Sans;
+  font-weight:900;
+  src:url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Blk.woff2) format("woff2"),
+  url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Blk.woff) format("woff")
+}
+.netflix_sans_font_loaded {
+  font-family:Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+}
+
+*{
+  margin:0;
+  padding:0;
+  border:0;
+}
+
+body, html {
+  background: #000;
+}
+
+.master_header {
+  height: 0;
+  position: relative;
+}
+.main_header {
+  overflow: visible;
+  position: relative;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  margin: auto;
+  display:flex;
+  justify-content:space-between;
+  width: 100%;
+  /* lembrar de colocar daqui pra baixo na midia screen*/
+  max-width: calc(64.66% - 6rem);
+  padding-left: 3rem;
+  padding-right: 3rem;
+  align-items: center;
+  z-index: 1;
+}
+
+.header_logo {
+  width: auto;
+  flex: 0 0 calc(33.333333333333336% - 1rem);
+}
+
+.netflix_logo {
+  color: rgb(229,9,20);
+  width: 9.25rem;
+  height: 2.5rem;
+  display: block;
+  margin-left: -1rem;
+}
+.netflix_logo path {
+  fill:currentColor
+}
+.header_buttons_content {
+  box-sizing: border-box;
+  width: 100%;
+  display: inherit;
+  height: auto;
+  font-weight: 400;
+  font-size: 1rem;
+}
+.header_language {
+  display: flex;
+  position: relative;
+  color: rgb(255,255,255);
+}
+
+.header_language_icon {
+  position: absolute;
+  pointer-events: none;
+  top: 8px;
+  left: 10px;
+  z-index: 1;
+}
+.header_language_icon > svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  fill: currentColor;
+  fill-rule: evenodd;
+}
+.header_language > select {
+  min-width: auto;
+  max-height: 32px;
+  color: inherit;
+  filter: opacity(100%);
+  padding: 5px 16px 5px 38px;
+  background:rgba(22,22,22,0.7);
+  border-color:rgba(128,128,128,0.7);
+  border-radius: 4px;
+  border: 1px solid rgba(128,128,128,0.7);
+  font-size: inherit;
+  letter-spacing: normal;
+  text-decoration: inherit;
+  text-transform: inherit;
+  box-sizing: border-box;
+  font: inherit;
+}
+.background {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+.background_shadowUp {
+  background: rgb(0 0 0 / 40%);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.background_shadowDown {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.background_img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transform: scale(1.25) translateY(-10%);
+}
+.header_login {
+  margin-left: 24px;
+  font: inherit;
+  display: flex;
+  align-items: center;
+  min-height: 24px;
+}
+.header_login_text {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: 7px 16px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background: rgb(229,9,20);
+  border-radius: 4px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.9, 0, 0.51, 1);
+}
+.header_login_text:hover {
+  transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
+  background-color: rgb(193,17,25);
+  border-radius: 4px;
+  max-height: 22px;
+}
