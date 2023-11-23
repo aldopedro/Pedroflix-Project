@@ -161,7 +161,7 @@ body, html {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  transform: scale(1.25) translateY(-10%);
+  transform: scale(1.25) translateY(-20%);
 }
 .header_login {
   margin-left: 24px;
