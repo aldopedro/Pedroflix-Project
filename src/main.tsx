@@ -10,7 +10,7 @@ const router = createBrowserRouter([
     element: <Home />
   },
   {
-    path:"/net-project-En",
+    path:"/net-project/en",
     element: <HomeEn />
   }
 ]);

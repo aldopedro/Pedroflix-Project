@@ -2,13 +2,14 @@
 import PopCornIcon from "../components/PopCornIcon"
 import {useState} from 'react'
 import style from "./Home.module.css"
+import { useNavigate } from "react-router-dom"
 
 function Home () {
     function portChange () {
       window.location.href = "/net-project"
       }
       function englishChange () {
-        window.location.href = "/net-project-En"
+        return navigate("/net-project/en")
        }
       
 function activeOrDesactive (value:number){
@@ -28,7 +29,7 @@ function activeOrDesactive (value:number){
         value === 6 ? setActiveInfo(0) : setActiveInfo(value)
     }
 }
-      
+const navigate = useNavigate();
 const [activeContent, setActiveContent] = useState(Number)
 const [activeInfo,setActiveInfo] = useState(Number)
   return (
