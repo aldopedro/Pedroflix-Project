@@ -1,9 +1,22 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
+import Home from "./pages/Home.tsx"
+import HomeEn from "./pages/HomeEn.tsx"
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
+
+const router = createBrowserRouter([
+  {
+    path:"/net-project",
+    element: <Home />
+  },
+  {
+    path:"/net-project-En",
+    element: <HomeEn />
+  }
+]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router}/>
   </React.StrictMode>,
 )

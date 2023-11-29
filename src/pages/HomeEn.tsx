@@ -7,7 +7,7 @@ function portChange () {
     window.location.href = "/net-project"
 }
 function englishChange () {
-    window.location.href = "/net-project/En"
+    window.location.href = "/net-project-En"
 }  
 function activeOrDesactive (value:number){
     if (activeInfo === 0) {
