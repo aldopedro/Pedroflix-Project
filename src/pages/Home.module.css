@@ -243,10 +243,10 @@
   .main_form {
     display: flex;
     justify-content: center;
-    align-items: center;
     margin-top: 16px;
-    max-width: 586px;
+    max-width: 596px;
     margin: 16px auto 0;
+    gap: 10px;
   }
   .main_form_input {
     position: relative;
@@ -283,36 +283,66 @@
     font-family: inherit;
     pointer-events: none;
   }
-  
+  .form_validate_active {
+    font-size: 0.8125rem;
+    color: rgb(235, 57, 66);
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .form_validate {
+    display: none;
+  }
+  .form_input:focus,
+  .form_email_false:focus,
+  .form_email_true:focus {
+    outline: 2px solid #FFF;
+    border-radius: 4px;
+    outline-offset: 2px;
+  }
+  .form_email_true_text {
+    display: none;
+  }
+  .form_email_true {
+    border: 1px solid rgb(43, 184, 113);
+  }
+  .form_email_false {
+    border: 1px solid rgb(235, 57, 66);
+  }
+  .form_input {
+    border: 1px solid rgba(128, 128, 128, 0.7);
+  }
+
+  .form_email_false_text{
+    display: flex;
+    align-items: center;
+    margin-top: 4px;
+    color: rgb(235, 57, 66);
+    gap: 4px;
+    align-items: center;
+    color: rgb(235, 57, 66);
+    font-size: 0.8125rem;
+  }
+  .form_input::placeholder {
+    color: #adadad;
+  }
+  .form_email_false,
+  .form_email_true,
   .form_input {
     width: 91%;
     display: flex;
     background-color: rgba(22, 22, 22, 0.7);
-    border: 1px solid #adadad;
     border-radius: 4px;
-    padding: 24px 16px 8px;
+    padding: 26px 16px 8px;
     color: inherit;
     outline-color:#FFFFFF;
     line-height: 1.8;
     font: inherit;
   }
-  
-  .form_input:focus {
-    outline: 2px solid #FFF;
-    border-radius: 4px;
-    outline-offset: 2px;
-  }
-  
-  .form_input::placeholder {
-    color: #adadad;
-  }
-  .main_form_button {
-    margin-left: 8px;
-  }
   .form_button_icon {
     min-width: 32px;
     max-height: 24px;
-    margin-left: 8px;
   }
   .form_button_icon path {
     fill: currentColor;

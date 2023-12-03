@@ -27,17 +27,32 @@ function activeOrDesactive (value:number){
         value === 6 ? setActiveInfo(0) : setActiveInfo(value)
     }
 }
+
+function validateEmail (email:string) {
+  const validate = new RegExp(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)
+  if (!validate.test(email)) {
+    setEmailValue(email);
+    setEmailCorrect(1);
+    return 1;
+  } else {
+    setEmailCorrect(2);
+    setEmailValue(email);
+    return 2;
+  }
+}
 const navigate = useNavigate();
 const [activeContent, setActiveContent] = useState(Number)
 const [activeInfo,setActiveInfo] = useState(Number)
+const [emailCorrect,setEmailCorrect] = useState(Number)
+const [emailValue,setEmailValue] = useState(String)
+const [activeLabel, setActiveLabel] = useState(Boolean)
   return (
     <div className={style.netflix_sans_font_loaded}>
     <div className={style.master_header}>
     <header className={style.main_header}>
       <div className={style.header_logo}>
         <span>
-          <svg className={style.netflix_logo} viewBox="0 0 111 30"><g><path d='M105.06233,14.2806261 L110.999156,30 C109.249227,29.7497422 107.500234,29.4366857 105.718437,29.1554972 L102.374168,20.4686475 L98.9371075,28.4375293 C97.2499766,28.1563408 95.5928391,28.061674 93.9057081,27.8432843 L99.9372012,14.0931671 L94.4680851,-5.68434189e-14 L99.5313525,-5.68434189e-14 L102.593495,7.87421502 L105.874965,-5.68434189e-14 L110.999156,-5.68434189e-14 L105.06233,14.2806261 Z M90.4686475,-5.68434189e-14 L85.8749649,-5.68434189e-14 L85.8749649,27.2499766 C87.3746368,27.3437061 88.9371075,27.4055675 90.4686475,27.5930265 L90.4686475,-5.68434189e-14 Z M81.9055207,26.93692 C77.7186241,26.6557316 73.5307901,26.4064111 69.250164,26.3117443 L69.250164,-5.68434189e-14 L73.9366389,-5.68434189e-14 L73.9366389,21.8745899 C76.6248008,21.9373887 79.3120255,22.1557784 81.9055207,22.2804387 L81.9055207,26.93692 Z M64.2496954,10.6561065 L64.2496954,15.3435186 L57.8442216,15.3435186 L57.8442216,25.9996251 L53.2186709,25.9996251 L53.2186709,-5.68434189e-14 L66.3436123,-5.68434189e-14 L66.3436123,4.68741213 L57.8442216,4.68741213 L57.8442216,10.6561065 L64.2496954,10.6561065 Z M45.3435186,4.68741213 L45.3435186,26.2498828 C43.7810479,26.2498828 42.1876465,26.2498828 40.6561065,26.3117443 L40.6561065,4.68741213 L35.8121661,4.68741213 L35.8121661,-5.68434189e-14 L50.2183897,-5.68434189e-14 L50.2183897,4.68741213 L45.3435186,4.68741213 Z M30.749836,15.5928391 C28.687787,15.5928391 26.2498828,15.5928391 24.4999531,15.6875059 L24.4999531,22.6562939 C27.2499766,22.4678976 30,22.2495079 32.7809542,22.1557784 L32.7809542,26.6557316 L19.812541,27.6876933 L19.812541,-5.68434189e-14 L32.7809542,-5.68434189e-14 L32.7809542,4.68741213 L24.4999531,4.68741213 L24.4999531,10.9991564 C26.3126816,10.9991564 29.0936358,10.9054269 30.749836,10.9054269 L30.749836,15.5928391 Z M4.78114163,12.9684132 L4.78114163,29.3429562 C3.09401069,29.5313525 1.59340144,29.7497422 0,30 L0,-5.68434189e-14 L4.4690224,-5.68434189e-14 L10.562377,17.0315868 L10.562377,-5.68434189e-14 L15.2497891,-5.68434189e-14 L15.2497891,28.061674 C13.5935889,28.3437998 11.906458,28.4375293 10.1246602,28.6868498 L4.78114163,12.9684132 Z'></path>
-          </g></svg>
+          <svg className={style.netflix_logo} viewBox="0 0 111 30"><g><path d='M105.06233,14.2806261 L110.999156,30 C109.249227,29.7497422 107.500234,29.4366857 105.718437,29.1554972 L102.374168,20.4686475 L98.9371075,28.4375293 C97.2499766,28.1563408 95.5928391,28.061674 93.9057081,27.8432843 L99.9372012,14.0931671 L94.4680851,-5.68434189e-14 L99.5313525,-5.68434189e-14 L102.593495,7.87421502 L105.874965,-5.68434189e-14 L110.999156,-5.68434189e-14 L105.06233,14.2806261 Z M90.4686475,-5.68434189e-14 L85.8749649,-5.68434189e-14 L85.8749649,27.2499766 C87.3746368,27.3437061 88.9371075,27.4055675 90.4686475,27.5930265 L90.4686475,-5.68434189e-14 Z M81.9055207,26.93692 C77.7186241,26.6557316 73.5307901,26.4064111 69.250164,26.3117443 L69.250164,-5.68434189e-14 L73.9366389,-5.68434189e-14 L73.9366389,21.8745899 C76.6248008,21.9373887 79.3120255,22.1557784 81.9055207,22.2804387 L81.9055207,26.93692 Z M64.2496954,10.6561065 L64.2496954,15.3435186 L57.8442216,15.3435186 L57.8442216,25.9996251 L53.2186709,25.9996251 L53.2186709,-5.68434189e-14 L66.3436123,-5.68434189e-14 L66.3436123,4.68741213 L57.8442216,4.68741213 L57.8442216,10.6561065 L64.2496954,10.6561065 Z M45.3435186,4.68741213 L45.3435186,26.2498828 C43.7810479,26.2498828 42.1876465,26.2498828 40.6561065,26.3117443 L40.6561065,4.68741213 L35.8121661,4.68741213 L35.8121661,-5.68434189e-14 L50.2183897,-5.68434189e-14 L50.2183897,4.68741213 L45.3435186,4.68741213 Z M30.749836,15.5928391 C28.687787,15.5928391 26.2498828,15.5928391 24.4999531,15.6875059 L24.4999531,22.6562939 C27.2499766,22.4678976 30,22.2495079 32.7809542,22.1557784 L32.7809542,26.6557316 L19.812541,27.6876933 L19.812541,-5.68434189e-14 L32.7809542,-5.68434189e-14 L32.7809542,4.68741213 L24.4999531,4.68741213 L24.4999531,10.9991564 C26.3126816,10.9991564 29.0936358,10.9054269 30.749836,10.9054269 L30.749836,15.5928391 Z M4.78114163,12.9684132 L4.78114163,29.3429562 C3.09401069,29.5313525 1.59340144,29.7497422 0,30 L0,-5.68434189e-14 L4.4690224,-5.68434189e-14 L10.562377,17.0315868 L10.562377,-5.68434189e-14 L15.2497891,-5.68434189e-14 L15.2497891,28.061674 C13.5935889,28.3437998 11.906458,28.4375293 10.1246602,28.6868498 L4.78114163,12.9684132 Z'></path></g></svg>
         </span>
       </div>
       <div className={style.header_buttons}>
@@ -71,25 +86,30 @@ const [activeInfo,setActiveInfo] = useState(Number)
                 </h1>
                 <p className={style.register_text}>Join today. Cancel anytime.</p>
                 <div>
-                    <form className={style.master_form} action="">
-                        <h3 className={style.form_title}>Ready to watch? Enter your email to create or restart your membership.</h3>
-                        <div className={style.main_form}>
-                            <div className={style.main_form_input}>
-                                <label className={activeContent === 0 ? style.form_label : style.form_label_active} htmlFor="">Email address</label>
-                                <input onFocus={() => setActiveContent(1)} onBlur={(e) => (e.target.value.length) > 0 ? setActiveContent(1) : setActiveContent(0) } className={style.form_input} type="email" name="" id="input"/>
-                            </div>
-                            <div className={style.main_form_button}>
-                                <button className={style.form_button} type="submit">Get Started
-                                    <div className={style.form_button_icon}>
-                                        <svg viewBox="0 0 24 24" width="24" height="24"> 
-                                            <path  d="M15.5859 12L8.29303 19.2928L9.70725 20.7071L17.7072 12.7071C17.8948 12.5195 18.0001 12.2652 18.0001 12C18.0001 11.7347 17.8948 11.4804 17.7072 11.2928L9.70724 3.29285L8.29303 4.70706L15.5859 12Z"/>
-                                        </svg>
-                                    </div>
-                                </button>
+                  <form className={style.master_form} action="">
+                    <h3 className={style.form_title}>Ready to watch? Enter your email to create or restart your membership.</h3>
+                    <div className={style.main_form}>
+                      <div className={style.main_form_input}>
+                        <label className={activeLabel === false ? style.form_label : style.form_label_active} htmlFor="">Email address</label>
+                          <input
+                            onChange={e => validateEmail(e.target.value)}
+                            onClick={() => setActiveLabel(true)}
+                            onBlur={(e) => validateEmail(e.target.value) === 1 && e.target.value != "" ? setActiveContent(2) : emailCorrect === 2 ? setActiveContent(1) : setActiveLabel(false)}
+                            className={`${activeContent === 2 && emailValue != "" && emailCorrect === 1 ? style.form_email_false : emailCorrect === 2 ? style.form_email_true : style.form_input}`}
+                            type="email" name="email" id="input" value={emailValue}/>
+                            <div className={activeContent === 2 && emailValue != "" && emailCorrect === 1 ? style.form_email_false_text : style.form_email_true_text}>
+                                  <svg width="16" height="16"><path fill="currentColor" fillRule="evenodd" d="M14.5 8C14.5 11.5899 11.5899 14.5 8 14.5C4.41015 14.5 1.5 11.5899 1.5 8C1.5 4.41015 4.41015 1.5 8 1.5C11.5899 1.5 14.5 4.41015 14.5 8ZM16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8ZM4.46967 5.53033L6.93934 8L4.46967 10.4697L5.53033 11.5303L8 9.06066L10.4697 11.5303L11.5303 10.4697L9.06066 8L11.5303 5.53033L10.4697 4.46967L8 6.93934L5.53033 4.46967L4.46967 5.53033Z"/></svg>
+                                  Please enter a valid email address.
                             </div>
                         </div>
-                    </form>
-                  </div>
+                        <div className={style.main_form_button}>
+                          <button className={style.form_button} type="submit">Get Started
+                            <div className={style.form_button_icon}><svg viewBox="0 0 24 24" width="24" height="24"><path  d="M15.5859 12L8.29303 19.2928L9.70725 20.7071L17.7072 12.7071C17.8948 12.5195 18.0001 12.2652 18.0001 12C18.0001 11.7347 17.8948 11.4804 17.7072 11.2928L9.70724 3.29285L8.29303 4.70706L15.5859 12Z"/></svg></div>
+                          </button>
+                        </div>
+                    </div>
+                  </form>
+                </div>
               </div>
           </div>
         <div className={style.background_shadowUp}></div>
@@ -248,43 +268,29 @@ const [activeInfo,setActiveInfo] = useState(Number)
               <form className={style.master_form} action="">
                 <h3 className={style.form_title}>Ready to watch? Enter your email to create or restart your membership.</h3>
                 <div className={style.main_form}>
-                  <div className={style.main_form_input}>
-                    <label className={activeContent === 0 ? style.form_label : style.form_label_active} htmlFor="">Email address</label>
-                    <input onFocus={() => setActiveContent(1)} onBlur={(e) => (e.target.value.length) > 0 ? setActiveContent(1) : setActiveContent(0) } className={style.form_input} type="email" name="" id="input"/>
-                  </div>
-                  <div className={style.main_form_button}>
-                    <button className={style.form_button} type="submit">Get Started
-                      <div className={style.form_button_icon}>
-                        <svg viewBox="0 0 24 24" width="24" height="24"> 
-                          <path  d="M15.5859 12L8.29303 19.2928L9.70725 20.7071L17.7072 12.7071C17.8948 12.5195 18.0001 12.2652 18.0001 12C18.0001 11.7347 17.8948 11.4804 17.7072 11.2928L9.70724 3.29285L8.29303 4.70706L15.5859 12Z"/>
-                        </svg>
+                    <div className={style.main_form_input}>
+                      <label className={activeLabel === false ? style.form_label : style.form_label_active} htmlFor="">Email address</label>
+                        <input
+                          onChange={e => validateEmail(e.target.value)}
+                          onClick={() => setActiveLabel(true)}
+                          onBlur={(e) => validateEmail(e.target.value) === 1 && e.target.value != "" ? setActiveContent(2) : emailCorrect === 2 ? setActiveContent(1) : setActiveLabel(false)}
+                          className={`${activeContent === 2 && emailValue != "" && emailCorrect === 1 ? style.form_email_false : emailCorrect === 2 ? style.form_email_true : style.form_input}`}
+                          type="email" name="email" id="input" value={emailValue}/>
+                          <div className={activeContent === 2 && emailValue != "" && emailCorrect === 1 ? style.form_email_false_text : style.form_email_true_text}>
+                                <svg width="16" height="16"><path fill="currentColor" fillRule="evenodd" d="M14.5 8C14.5 11.5899 11.5899 14.5 8 14.5C4.41015 14.5 1.5 11.5899 1.5 8C1.5 4.41015 4.41015 1.5 8 1.5C11.5899 1.5 14.5 4.41015 14.5 8ZM16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8ZM4.46967 5.53033L6.93934 8L4.46967 10.4697L5.53033 11.5303L8 9.06066L10.4697 11.5303L11.5303 10.4697L9.06066 8L11.5303 5.53033L10.4697 4.46967L8 6.93934L5.53033 4.46967L4.46967 5.53033Z"/></svg>
+                                Please enter a valid email address.
+                          </div>
                       </div>
-                    </button>
-                  </div>
+                    <div className={style.main_form_button}>
+                        <button className={style.form_button} type="submit">Get Started
+                          <div className={style.form_button_icon}><svg viewBox="0 0 24 24" width="24" height="24"><path  d="M15.5859 12L8.29303 19.2928L9.70725 20.7071L17.7072 12.7071C17.8948 12.5195 18.0001 12.2652 18.0001 12C18.0001 11.7347 17.8948 11.4804 17.7072 11.2928L9.70724 3.29285L8.29303 4.70706L15.5859 12Z"/></svg></div>
+                        </button>
+                    </div>
                 </div>
               </form>
             </div>
         </div>
       </section>
-       
-    
-    
- 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-
       <footer className={style.footer}>
         <h6 className={style.footer_title}>Questions? Call<a className={style.footer_link}href="">0800 591 3517</a></h6>
         <ul className={style.footer_info}>
