@@ -1,13 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Home from "./pages/Home.tsx"
+import HomePT from "./pages/HomePT.tsx"
 import HomeEn from "./pages/HomeEn.tsx"
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 
 const router = createBrowserRouter([
   {
     path:"/net-project",
-    element: <Home />
+    element: <HomePT />
   },
   {
     path:"/net-project/en",
