@@ -7,15 +7,15 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom"
 
 const router = createBrowserRouter([
   {
-    path: "/Netflix-Project/",
+    path: "/Pedroflix-Project/",
     element: <HomeBr />
   },
   {
-    path: "/Netflix-Project/en",
+    path: "/Pedroflix-Project/en",
     element: <HomeEn />
   },
   {
-    path: "/Netflix-Project/register-br",
+    path: "/Pedroflix-Project/register-br",
     element: <RegisterBr />
   }
 ]);

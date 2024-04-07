@@ -1,3 +1,5 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @font-face {
   font-display: optional;
   font-family: Netflix Sans;
@@ -46,7 +48,7 @@
     url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Blk.woff) format("woff")
 }
 
-.netflix_sans_font_loaded {
+.PedroFlix_sans_font_loaded {
   font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
   color: #FFF;
 }
@@ -92,17 +94,10 @@ html {
     flex: 0 0 calc(33.333333333333336% - 16px);
     margin-left: 16px;
   }
-
-  .netflix_logo {
-    color: rgb(229, 9, 20);
-    width: 9.25rem;
-    height: 2.5rem;
-    display: block;
-    margin-left: -1rem;
-  }
-
-  .netflix_logo path {
-    fill: currentColor
+  .header_logo_title {
+    font-family: Bebas Neue;
+    font-size: 60px;
+    color: #E50914;
   }
 
   .header_buttons_content {
@@ -737,6 +732,9 @@ html {
 }
 
 @media (max-width:960px) {
+  .header_logo_title {
+    font-size: 38px;
+  }
   .active_icon, 
   .desactive_icon {
     display: none;
@@ -779,10 +777,6 @@ html {
   .master_questions {
     padding: 72px 20px;
   }
-  .netflix_logo {
-    width: 5.5625rem;
-    height: 1.5rem;
-  }
   ._header_language > select {
     width: auto;
   }
@@ -807,7 +801,7 @@ html {
 }
 @media (max-width: 600px) {
   .main_header {
-    padding: 0 2rem;
+    padding: 0 10px;
   }
   .card_title,
   .register_title,

@@ -5,14 +5,14 @@ import { useNavigate } from "react-router-dom"
 
 function HomeBr() {
   function portChange() {
-    return navigate("/Netflix-Project/")
+    return navigate("/Pedroflix-Project/")
   }
   function englishChange() {
-    return navigate("/Netflix-Project/en")
+    return navigate("/Pedroflix-Project/en")
   }
   function RegisterBr() {
     if (emailCorrect === 2 && emailValue != "") {
-      return navigate("/Netflix-Project/register-br")
+      return navigate("/Pedroflix-Project/register-br")
     }
     else if (emailValue === "") {
       event?.preventDefault()
@@ -63,14 +63,13 @@ function HomeBr() {
   const [emailValue, setEmailValue] = useState(String)
   const [activeLabel, setActiveLabel] = useState(Boolean)
   return (
-    <div className={style.netflix_sans_font_loaded}>
+    <div className={style.PedroFlix_sans_font_loaded}>
       <div className={style.master_header}>
         <header className={style.main_header}>
           <div className={style.header}>
             <div className={style.header_logo}>
-              <span>
-                <svg className={style.netflix_logo} viewBox="0 0 111 30"><g><path d='M105.06233,14.2806261 L110.999156,30 C109.249227,29.7497422 107.500234,29.4366857 105.718437,29.1554972 L102.374168,20.4686475 L98.9371075,28.4375293 C97.2499766,28.1563408 95.5928391,28.061674 93.9057081,27.8432843 L99.9372012,14.0931671 L94.4680851,-5.68434189e-14 L99.5313525,-5.68434189e-14 L102.593495,7.87421502 L105.874965,-5.68434189e-14 L110.999156,-5.68434189e-14 L105.06233,14.2806261 Z M90.4686475,-5.68434189e-14 L85.8749649,-5.68434189e-14 L85.8749649,27.2499766 C87.3746368,27.3437061 88.9371075,27.4055675 90.4686475,27.5930265 L90.4686475,-5.68434189e-14 Z M81.9055207,26.93692 C77.7186241,26.6557316 73.5307901,26.4064111 69.250164,26.3117443 L69.250164,-5.68434189e-14 L73.9366389,-5.68434189e-14 L73.9366389,21.8745899 C76.6248008,21.9373887 79.3120255,22.1557784 81.9055207,22.2804387 L81.9055207,26.93692 Z M64.2496954,10.6561065 L64.2496954,15.3435186 L57.8442216,15.3435186 L57.8442216,25.9996251 L53.2186709,25.9996251 L53.2186709,-5.68434189e-14 L66.3436123,-5.68434189e-14 L66.3436123,4.68741213 L57.8442216,4.68741213 L57.8442216,10.6561065 L64.2496954,10.6561065 Z M45.3435186,4.68741213 L45.3435186,26.2498828 C43.7810479,26.2498828 42.1876465,26.2498828 40.6561065,26.3117443 L40.6561065,4.68741213 L35.8121661,4.68741213 L35.8121661,-5.68434189e-14 L50.2183897,-5.68434189e-14 L50.2183897,4.68741213 L45.3435186,4.68741213 Z M30.749836,15.5928391 C28.687787,15.5928391 26.2498828,15.5928391 24.4999531,15.6875059 L24.4999531,22.6562939 C27.2499766,22.4678976 30,22.2495079 32.7809542,22.1557784 L32.7809542,26.6557316 L19.812541,27.6876933 L19.812541,-5.68434189e-14 L32.7809542,-5.68434189e-14 L32.7809542,4.68741213 L24.4999531,4.68741213 L24.4999531,10.9991564 C26.3126816,10.9991564 29.0936358,10.9054269 30.749836,10.9054269 L30.749836,15.5928391 Z M4.78114163,12.9684132 L4.78114163,29.3429562 C3.09401069,29.5313525 1.59340144,29.7497422 0,30 L0,-5.68434189e-14 L4.4690224,-5.68434189e-14 L10.562377,17.0315868 L10.562377,-5.68434189e-14 L15.2497891,-5.68434189e-14 L15.2497891,28.061674 C13.5935889,28.3437998 11.906458,28.4375293 10.1246602,28.6868498 L4.78114163,12.9684132 Z'></path>
-                </g></svg>
+              <span className={style.header_logo_title}>
+                PEDROFLIX
               </span>
             </div>
             <div className={style.header_buttons}>
@@ -197,7 +196,7 @@ function HomeBr() {
           <ul className={style.questions}>
             <li className={style.questions_li}>
               <button className={style.questions_button} onClick={() => activeOrDesactive(1)} type="button">
-                <span className={style.questions_subtitle}>O que é a Netflix?</span>
+                <span className={style.questions_subtitle}>O que é a PedroFlix?</span>
                 <svg className={activeInfo === 1 ? style.active_icon : style.desactive_icon}>
                   <path fill="currentColor" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z"></path>
                 </svg>
@@ -207,7 +206,7 @@ function HomeBr() {
               </button>
               <div className={activeInfo === 1 ? style.active_info : style.desactive_info}>
                 <span>
-                  A Netflix é um serviço de streaming que oferece uma ampla variedade de séries, filmes e documentários premiados em milhares de aparelhos conectados à internet.
+                  A PedroFlix é um serviço de streaming que oferece uma ampla variedade de séries, filmes e documentários premiados em milhares de aparelhos conectados à internet.
                   <br />
                   <br />
                   Você pode assistir a quantos filmes e séries quiser, quando e onde quiser – tudo por um preço mensal acessível. Aqui você sempre encontra novidades. A cada semana, adicionamos novas séries e filmes.
@@ -216,7 +215,7 @@ function HomeBr() {
             </li>
             <li className={style.questions_li}>
               <button className={style.questions_button} onClick={() => activeOrDesactive(2)} type="button">
-                <span className={style.questions_subtitle}>Quanto custa a Netflix?</span>
+                <span className={style.questions_subtitle}>Quanto custa a PedroFlix?</span>
                 <svg className={activeInfo === 2 ? style.active_icon : style.desactive_icon}>
                   <path fill="currentColor" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z"></path>
                 </svg>
@@ -226,7 +225,7 @@ function HomeBr() {
               </button>
               <div className={activeInfo === 2 ? style.active_info : style.desactive_info}>
                 <span>
-                  Assista à Netflix no seu celular, tablet, Smart TV, notebook ou aparelho de streaming por uma taxa mensal única. Os planos variam de R$18,90 a R$55,90 por mês. Sem contrato nem taxas extras.
+                  Assista à PedroFlix no seu celular, tablet, Smart TV, notebook ou aparelho de streaming por uma taxa mensal única. Os planos variam de R$18,90 a R$55,90 por mês. Sem contrato nem taxas extras.
                 </span>
               </div>
             </li>
@@ -242,10 +241,10 @@ function HomeBr() {
               </button>
               <div className={activeInfo === 3 ? style.active_info : style.desactive_info}>
                 <span>
-                  Assista onde quiser, quando quiser. Faça login com sua conta Netflix em netflix.com para começar a assistir no computador ou em qualquer aparelho conectado à Internet compatível com o aplicativo Netflix, como Smart TVs, smartphones, tablets, aparelhos de streaming e videogames.
+                  Assista onde quiser, quando quiser. Faça login com sua conta PedroFlix em PedroFlix.com para começar a assistir no computador ou em qualquer aparelho conectado à Internet compatível com o aplicativo PedroFlix, como Smart TVs, smartphones, tablets, aparelhos de streaming e videogames.
                   <br />
                   <br />
-                  Você também pode baixar a sua série favorita com o aplicativo Netflix para iOS, Android ou Windows 10. Use downloads para levar a Netflix para onde quiser sem precisar de conexão com a Internet. Leve a Netflix com você para qualquer lugar.
+                  Você também pode baixar a sua série favorita com o aplicativo PedroFlix para iOS, Android ou Windows 10. Use downloads para levar a PedroFlix para onde quiser sem precisar de conexão com a Internet. Leve a PedroFlix com você para qualquer lugar.
                 </span>
               </div>
             </li>
@@ -261,13 +260,13 @@ function HomeBr() {
               </button>
               <div className={activeInfo === 4 ? style.active_info : style.desactive_info}>
                 <span>
-                  A Netflix é flexível. Não há contratos nem compromissos. Você pode cancelar a sua conta na internet com apenas dois cliques. Não há taxa de cancelamento – você pode começar ou encerrar a sua assinatura a qualquer momento.
+                  A PedroFlix é flexível. Não há contratos nem compromissos. Você pode cancelar a sua conta na internet com apenas dois cliques. Não há taxa de cancelamento – você pode começar ou encerrar a sua assinatura a qualquer momento.
                 </span>
               </div>
             </li>
             <li className={style.questions_li}>
               <button className={style.questions_button} onClick={() => activeOrDesactive(5)} type="button">
-                <span className={style.questions_subtitle}>O que eu posso assistir na Netflix?</span>
+                <span className={style.questions_subtitle}>O que eu posso assistir na PedroFlix?</span>
                 <svg className={activeInfo === 5 ? style.active_icon : style.desactive_icon}>
                   <path fill="currentColor" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z"></path>
                 </svg>
@@ -277,13 +276,13 @@ function HomeBr() {
               </button>
               <div className={activeInfo === 5 ? style.active_info : style.desactive_info}>
                 <span>
-                  A Netflix tem um grande catálogo de filmes, documentários, séries, originais Netflix premiados e muito mais. Assista o quanto quiser, quando quiser.
+                  A PedroFlix tem um grande catálogo de filmes, documentários, séries, originais PedroFlix premiados e muito mais. Assista o quanto quiser, quando quiser.
                 </span>
               </div>
             </li>
             <li className={style.questions_li}>
               <button className={style.questions_button} onClick={() => activeOrDesactive(6)} type="button">
-                <span className={style.questions_subtitle}>A Netflix é adequada para crianças?</span>
+                <span className={style.questions_subtitle}>A PedroFlix é adequada para crianças?</span>
                 <svg className={activeInfo === 6 ? style.active_icon : style.desactive_icon}>
                   <path fill="currentColor" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z"></path>
                 </svg>
@@ -292,7 +291,7 @@ function HomeBr() {
                 </svg>
               </button>
               <div className={activeInfo === 6 ? style.active_info : style.desactive_info}>
-                <span>A experiência infantil da Netflix faz parte da sua assinatura para que as crianças se divirtam em seu próprio espaço com séries e filmes familiares sob a supervisão dos responsáveis.
+                <span>A experiência infantil da PedroFlix faz parte da sua assinatura para que as crianças se divirtam em seu próprio espaço com séries e filmes familiares sob a supervisão dos responsáveis.
                   <br />
                   <br />
                   O recurso de controle parental, incluso nos perfis para crianças e protegido por PIN, permite restringir a classificação etária do conteúdo que as crianças podem ver e bloquear títulos específicos que você não quer que elas assistam.
@@ -346,7 +345,7 @@ function HomeBr() {
           <li><a className={style.footer_link} href="">Entre em contato</a></li>
           <li><a className={style.footer_link} href="">Teste de velocidade</a></li>
           <li><a className={style.footer_link} href="">Avisos legais</a></li>
-          <li><a className={style.footer_link} href="">Só na Netflix</a></li>
+          <li><a className={style.footer_link} href="">Só na PedroFlix</a></li>
         </ul>
         <div className={style.main_header_language}>
           <div role="img" aria-hidden="true" className={style.header_language}>
@@ -360,7 +359,7 @@ function HomeBr() {
             </div>
           </div>
         </div>
-        <div><h6 className={style.footer_name}>Netflix Brasil</h6></div>
+        <div><h6 className={style.footer_name}>PedroFlix Brasil</h6></div>
       </footer>
     </div>
   )
