@@ -1,17 +1,20 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import HomePT from "./pages/HomePT.tsx"
+import HomeBR from "./pages/HomeBR.tsx"
 import HomeEn from "./pages/HomeEn.tsx"
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 
 const router = createBrowserRouter([
   {
-    path:"/net-project",
-    element: <HomePT />
+    path:"/Netflix-Project",
+    element: <HomeBR />
   },
   {
-    path:"/net-project/en",
+    path:"/Netflix-Project/en",
     element: <HomeEn />
+  },
+  {
+    path:"/Netflix-Project/test"
   }
 ]);
 
