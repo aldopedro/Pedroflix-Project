@@ -5,10 +5,10 @@ import { useNavigate } from "react-router-dom"
 
 function Home () {
     function portChange () {
-      window.location.href = "/net-project"
+      return navigate("/Netflix-Project/")
       }
       function englishChange () {
-        return navigate("/net-project/en")
+        return navigate("/Netflix-Project/en")
        }
       
 function activeOrDesactive (value:number){

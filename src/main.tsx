@@ -6,7 +6,7 @@ import {createBrowserRouter, RouterProvider} from "react-router-dom";
 
 const router = createBrowserRouter([
   {
-    path:"/Netflix-Project",
+    path:"/Netflix-Project/",
     element: <HomeBR />
   },
   {
