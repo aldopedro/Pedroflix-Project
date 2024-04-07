@@ -18,7 +18,8 @@ function HomeBr() {
       event?.preventDefault()
       handleFocusInput()
       setActiveLabel(true)
-    }
+    } else
+      event?.preventDefault()
   }
 
   function activeOrDesactive(value: number) {

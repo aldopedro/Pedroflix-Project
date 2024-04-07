@@ -1,5 +1,5 @@
 
-import { useState } from 'react'
+import { useCallback, useRef, useState } from 'react'
 import style from "./Home.module.css"
 import { useNavigate } from "react-router-dom"
 
@@ -11,7 +11,15 @@ function HomeEn() {
     return navigate("/Netflix-Project/en")
   }
   function RegisterBr() {
-    return navigate("/Netflix-Project/register-br")
+    if (emailCorrect === 2 && emailValue != "") {
+      return navigate("/Netflix-Project/register-br")
+    }
+    else if (emailValue === "") {
+      event?.preventDefault()
+      handleFocusInput()
+      setActiveLabel(true)
+    } else
+      event?.preventDefault()
   }
 
   function activeOrDesactive(value: number) {
@@ -43,6 +51,11 @@ function HomeEn() {
       return 2;
     }
   }
+  const handleFocusInput = useCallback(() => {
+    event?.preventDefault()
+    emailInputRef.current?.focus();
+  }, [])
+  const emailInputRef = useRef<HTMLInputElement>(null);
   const navigate = useNavigate();
   const [activeContent, setActiveContent] = useState(Number)
   const [activeInfo, setActiveInfo] = useState(Number)
@@ -98,6 +111,7 @@ function HomeEn() {
                     <div className={style.main_form_input}>
                       <label className={activeLabel === false ? style.form_label : style.form_label_active} htmlFor="">Email address</label>
                       <input
+                        ref={emailInputRef}
                         onChange={e => validateEmail(e.target.value)}
                         onClick={() => setActiveLabel(true)}
                         onBlur={(e) => validateEmail(e.target.value) === 1 && e.target.value != "" ? setActiveContent(2) : emailCorrect === 2 ? setActiveContent(1) : setActiveLabel(false)}
@@ -188,6 +202,9 @@ function HomeEn() {
                 <svg className={activeInfo === 1 ? style.active_icon : style.desactive_icon} height="36" width="36">
                   <path fill="currentColor" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z"></path>
                 </svg>
+                <svg className={activeInfo === 6 ? style.active_icon_mobile : style.desactive_icon_mobile}>
+                  <path fill="currentColor" d="M11 11V2H13V11H22V13H13V22H11V13H2V11H11Z" />
+                </svg>
               </button>
               <div className={activeInfo === 1 ? style.active_info : style.desactive_info}>
                 <span>
@@ -202,6 +219,9 @@ function HomeEn() {
                 <svg className={activeInfo === 2 ? style.active_icon : style.desactive_icon} height="36" width="36">
                   <path fill="currentColor" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z"></path>
                 </svg>
+                <svg className={activeInfo === 6 ? style.active_icon_mobile : style.desactive_icon_mobile}>
+                  <path fill="currentColor" d="M11 11V2H13V11H22V13H13V22H11V13H2V11H11Z" />
+                </svg>
               </button>
               <div className={activeInfo === 2 ? style.active_info : style.desactive_info}>
                 <span>
@@ -213,6 +233,9 @@ function HomeEn() {
                 <span>Where can I watch?</span>
                 <svg className={activeInfo === 3 ? style.active_icon : style.desactive_icon} height="36" width="36">
                   <path fill="currentColor" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z"></path>
+                </svg>
+                <svg className={activeInfo === 6 ? style.active_icon_mobile : style.desactive_icon_mobile}>
+                  <path fill="currentColor" d="M11 11V2H13V11H22V13H13V22H11V13H2V11H11Z" />
                 </svg>
               </button>
               <div className={activeInfo === 3 ? style.active_info : style.desactive_info}>
@@ -228,6 +251,9 @@ function HomeEn() {
                 <svg className={activeInfo === 4 ? style.active_icon : style.desactive_icon} height="36" width="36">
                   <path fill="currentColor" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z"></path>
                 </svg>
+                <svg className={activeInfo === 6 ? style.active_icon_mobile : style.desactive_icon_mobile}>
+                  <path fill="currentColor" d="M11 11V2H13V11H22V13H13V22H11V13H2V11H11Z" />
+                </svg>
               </button>
               <div className={activeInfo === 4 ? style.active_info : style.desactive_info}>
                 <span>
@@ -240,6 +266,9 @@ function HomeEn() {
                 <svg className={activeInfo === 5 ? style.active_icon : style.desactive_icon} height="36" width="36">
                   <path fill="currentColor" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z"></path>
                 </svg>
+                <svg className={activeInfo === 6 ? style.active_icon_mobile : style.desactive_icon_mobile}>
+                  <path fill="currentColor" d="M11 11V2H13V11H22V13H13V22H11V13H2V11H11Z" />
+                </svg>
               </button>
               <div className={activeInfo === 5 ? style.active_info : style.desactive_info}>
                 <span>
@@ -251,6 +280,9 @@ function HomeEn() {
                 <span>Is Netflix good for kids?</span>
                 <svg className={activeInfo === 6 ? style.active_icon : style.desactive_icon} height="36" width="36">
                   <path fill="currentColor" d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z"></path>
+                </svg>
+                <svg className={activeInfo === 6 ? style.active_icon_mobile : style.desactive_icon_mobile}>
+                  <path fill="currentColor" d="M11 11V2H13V11H22V13H13V22H11V13H2V11H11Z" />
                 </svg>
               </button>
               <div className={activeInfo === 6 ? style.active_info : style.desactive_info}>
