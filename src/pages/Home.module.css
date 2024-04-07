@@ -232,6 +232,9 @@
     font-weight: 500;
     margin: 16px 0;
   }
+  .form {
+    width: 664px;
+  }
   .master_form {
     margin-top: 12px;
     width: 100%;
@@ -242,6 +245,7 @@
   .main_form_input {
     position: relative;
     flex: 1 1 auto;
+    width: 100%
   }
   .form_title {
     text-align: center;
@@ -354,6 +358,7 @@
     cursor: pointer;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.9, 0, 0.51, 1);
+    white-space: nowrap;
   }
   .form_button:hover {
     transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
@@ -630,3 +635,6 @@
       min-height: min(80vh, 45rem);
     }
   }
+@media (max-width:960px) {
+  
+}

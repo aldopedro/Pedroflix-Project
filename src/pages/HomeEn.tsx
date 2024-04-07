@@ -1,13 +1,16 @@
+
 import {useState} from 'react'
 import style from "./Home.module.css"
 import { useNavigate } from "react-router-dom"
+
 function HomeEn () {
-function portChange () {
-    return navigate("/net-project")
-}
-function englishChange () {
-    return navigate("/net-project/en")
-}  
+    function portChange () {
+      return navigate("/net-project")
+      }
+      function englishChange () {
+        return navigate("/net-project/en")
+       }
+      
 function activeOrDesactive (value:number){
     if (activeInfo === 0) {
         setActiveInfo(value);
@@ -25,7 +28,6 @@ function activeOrDesactive (value:number){
         value === 6 ? setActiveInfo(0) : setActiveInfo(value)
     }
 }
-
 function validateEmail (email:string) {
   const validate = new RegExp(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)
   if (!validate.test(email)) {
@@ -51,7 +53,8 @@ const [activeLabel, setActiveLabel] = useState(Boolean)
       <div className={style.header}>
       <div className={style.header_logo}>
         <span>
-          <svg className={style.netflix_logo} viewBox="0 0 111 30"><g><path d='M105.06233,14.2806261 L110.999156,30 C109.249227,29.7497422 107.500234,29.4366857 105.718437,29.1554972 L102.374168,20.4686475 L98.9371075,28.4375293 C97.2499766,28.1563408 95.5928391,28.061674 93.9057081,27.8432843 L99.9372012,14.0931671 L94.4680851,-5.68434189e-14 L99.5313525,-5.68434189e-14 L102.593495,7.87421502 L105.874965,-5.68434189e-14 L110.999156,-5.68434189e-14 L105.06233,14.2806261 Z M90.4686475,-5.68434189e-14 L85.8749649,-5.68434189e-14 L85.8749649,27.2499766 C87.3746368,27.3437061 88.9371075,27.4055675 90.4686475,27.5930265 L90.4686475,-5.68434189e-14 Z M81.9055207,26.93692 C77.7186241,26.6557316 73.5307901,26.4064111 69.250164,26.3117443 L69.250164,-5.68434189e-14 L73.9366389,-5.68434189e-14 L73.9366389,21.8745899 C76.6248008,21.9373887 79.3120255,22.1557784 81.9055207,22.2804387 L81.9055207,26.93692 Z M64.2496954,10.6561065 L64.2496954,15.3435186 L57.8442216,15.3435186 L57.8442216,25.9996251 L53.2186709,25.9996251 L53.2186709,-5.68434189e-14 L66.3436123,-5.68434189e-14 L66.3436123,4.68741213 L57.8442216,4.68741213 L57.8442216,10.6561065 L64.2496954,10.6561065 Z M45.3435186,4.68741213 L45.3435186,26.2498828 C43.7810479,26.2498828 42.1876465,26.2498828 40.6561065,26.3117443 L40.6561065,4.68741213 L35.8121661,4.68741213 L35.8121661,-5.68434189e-14 L50.2183897,-5.68434189e-14 L50.2183897,4.68741213 L45.3435186,4.68741213 Z M30.749836,15.5928391 C28.687787,15.5928391 26.2498828,15.5928391 24.4999531,15.6875059 L24.4999531,22.6562939 C27.2499766,22.4678976 30,22.2495079 32.7809542,22.1557784 L32.7809542,26.6557316 L19.812541,27.6876933 L19.812541,-5.68434189e-14 L32.7809542,-5.68434189e-14 L32.7809542,4.68741213 L24.4999531,4.68741213 L24.4999531,10.9991564 C26.3126816,10.9991564 29.0936358,10.9054269 30.749836,10.9054269 L30.749836,15.5928391 Z M4.78114163,12.9684132 L4.78114163,29.3429562 C3.09401069,29.5313525 1.59340144,29.7497422 0,30 L0,-5.68434189e-14 L4.4690224,-5.68434189e-14 L10.562377,17.0315868 L10.562377,-5.68434189e-14 L15.2497891,-5.68434189e-14 L15.2497891,28.061674 C13.5935889,28.3437998 11.906458,28.4375293 10.1246602,28.6868498 L4.78114163,12.9684132 Z'></path></g></svg>
+          <svg className={style.netflix_logo} viewBox="0 0 111 30"><g><path d='M105.06233,14.2806261 L110.999156,30 C109.249227,29.7497422 107.500234,29.4366857 105.718437,29.1554972 L102.374168,20.4686475 L98.9371075,28.4375293 C97.2499766,28.1563408 95.5928391,28.061674 93.9057081,27.8432843 L99.9372012,14.0931671 L94.4680851,-5.68434189e-14 L99.5313525,-5.68434189e-14 L102.593495,7.87421502 L105.874965,-5.68434189e-14 L110.999156,-5.68434189e-14 L105.06233,14.2806261 Z M90.4686475,-5.68434189e-14 L85.8749649,-5.68434189e-14 L85.8749649,27.2499766 C87.3746368,27.3437061 88.9371075,27.4055675 90.4686475,27.5930265 L90.4686475,-5.68434189e-14 Z M81.9055207,26.93692 C77.7186241,26.6557316 73.5307901,26.4064111 69.250164,26.3117443 L69.250164,-5.68434189e-14 L73.9366389,-5.68434189e-14 L73.9366389,21.8745899 C76.6248008,21.9373887 79.3120255,22.1557784 81.9055207,22.2804387 L81.9055207,26.93692 Z M64.2496954,10.6561065 L64.2496954,15.3435186 L57.8442216,15.3435186 L57.8442216,25.9996251 L53.2186709,25.9996251 L53.2186709,-5.68434189e-14 L66.3436123,-5.68434189e-14 L66.3436123,4.68741213 L57.8442216,4.68741213 L57.8442216,10.6561065 L64.2496954,10.6561065 Z M45.3435186,4.68741213 L45.3435186,26.2498828 C43.7810479,26.2498828 42.1876465,26.2498828 40.6561065,26.3117443 L40.6561065,4.68741213 L35.8121661,4.68741213 L35.8121661,-5.68434189e-14 L50.2183897,-5.68434189e-14 L50.2183897,4.68741213 L45.3435186,4.68741213 Z M30.749836,15.5928391 C28.687787,15.5928391 26.2498828,15.5928391 24.4999531,15.6875059 L24.4999531,22.6562939 C27.2499766,22.4678976 30,22.2495079 32.7809542,22.1557784 L32.7809542,26.6557316 L19.812541,27.6876933 L19.812541,-5.68434189e-14 L32.7809542,-5.68434189e-14 L32.7809542,4.68741213 L24.4999531,4.68741213 L24.4999531,10.9991564 C26.3126816,10.9991564 29.0936358,10.9054269 30.749836,10.9054269 L30.749836,15.5928391 Z M4.78114163,12.9684132 L4.78114163,29.3429562 C3.09401069,29.5313525 1.59340144,29.7497422 0,30 L0,-5.68434189e-14 L4.4690224,-5.68434189e-14 L10.562377,17.0315868 L10.562377,-5.68434189e-14 L15.2497891,-5.68434189e-14 L15.2497891,28.061674 C13.5935889,28.3437998 11.906458,28.4375293 10.1246602,28.6868498 L4.78114163,12.9684132 Z'></path>
+          </g></svg>
         </span>
       </div>
       <div className={style.header_buttons}>
@@ -71,22 +74,22 @@ const [activeLabel, setActiveLabel] = useState(Boolean)
                 <a className={style.header_login_text} href="/home">Sign In</a>
               </div>
             </div>
-         </div>
+          </div>
         </div>
       </div>
     </header>
     </div>
     <div className={style.main_background}>
       <div className={style.background}>
-        <img className={style.background_img} src='https://assets.nflxext.com/ffe/siteui/vlv3/7ca5b7c7-20aa-42a8-a278-f801b0d65fa1/539c1d05-ea60-4865-88c5-be28fa1ac8b4/BR-en-20240326-popsignuptwoweeks-perspective_alpha_website_large.jpg' alt="" />
+        <img className={style.background_img} src="https://assets.nflxext.com/ffe/siteui/vlv3/7ca5b7c7-20aa-42a8-a278-f801b0d65fa1/539c1d05-ea60-4865-88c5-be28fa1ac8b4/BR-pt-20240326-popsignuptwoweeks-perspective_alpha_website_large.jpg" alt="" />
         <div className={style.master_register}>
             <div className={style.main_register}>
                 <h1 className={style.register_title}>
-                Enjoy big movies, hit series and more from BRL18.90.
+                Unlimited movies, TV shows, and more
                 </h1>
-                <p className={style.register_text}>Join today. Cancel anytime.</p>
-                <div>
-                  <form className={style.master_form} action="">
+                <p className={style.register_text}>Starts at BRL 18.90. Cancel anytime.</p>
+                <div className={style.master_form}>
+                  <form action="">
                     <h3 className={style.form_title}>Ready to watch? Enter your email to create or restart your membership.</h3>
                     <div className={style.main_form}>
                       <div className={style.main_form_input}>
@@ -112,17 +115,12 @@ const [activeLabel, setActiveLabel] = useState(Boolean)
                 </div>
               </div>
           </div>
-        <div className={style.background_shadowUp}></div>
-        <div className={style.background_shadowDown}></div>
-      </div>
-    </div>
-    <div className={style.see_more}>
-      <div className={style.see_more_info}>
-        <h2 className={style.see_more_title}>The Netflix you love for just BRL18.90.</h2>
-        <p className={style.see_more_text}>Get the Standard with ads plan.</p>
-        <button className={style.see_more_button}>Learn More
-          <svg width="24" height="24"><path fill="#448ef4"d="M15.5859 12L8.29303 19.2928L9.70725 20.7071L17.7072 12.7071C17.8948 12.5195 18.0001 12.2652 18.0001 12C18.0001 11.7347 17.8948 11.4804 17.7072 11.2928L9.70724 3.29285L8.29303 4.70706L15.5859 12Z"/></svg>
-        </button>
+          <div className={style.main_curve}>
+            <div className={style.curve}> 
+              <div className={style.curve_container}></div>
+            </div>
+          </div>
+        <div className={style.background_shadow}></div>
       </div>
     </div>
     <section>
@@ -139,7 +137,7 @@ const [activeLabel, setActiveLabel] = useState(Boolean)
         </div>
       </div>
       <div className={style.card_two}>
-        <div>
+        <div className={style.card_two_content}>
           <img className={style.card_two_image} src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile.png"/>
           <div className={style.card_two_video}>
             <video autoPlay loop muted playsInline><source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices.m4v" type="video/mp4"/></video>
@@ -147,12 +145,12 @@ const [activeLabel, setActiveLabel] = useState(Boolean)
         </div>
         <div className={style.card_info}>
           <h1 className={style.card_title}>Watch everywhere</h1>
-          <p className={style.card_text} >Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
+          <p className={style.card_text}>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
         </div>
       </div>
       <div className={style.card_three}>
         <div className={style.card_three_info}>
-          <h1 className={style.card_title} >Create profiles for kids</h1>
+          <h1 className={style.card_title}>Create profiles for kids</h1>
           <p className={style.card_text}>Send kids on adventures with their favorite characters in a space made just for them—free with your membership.</p>
         </div>
         <div>
@@ -166,7 +164,7 @@ const [activeLabel, setActiveLabel] = useState(Boolean)
             <img className={style.card_four_small_image} src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/boxshot.png" alt="" />
             <div className={style.card_four_gif_info}>
             <p className={style.card_four_gif_title}>Stranger Things</p>
-            <p className={style.card_four_gif_text}>Download em andamento... </p>
+            <p className={style.card_four_gif_text}>Download in progress...</p>
             </div>
             <div className={style.card_four_gif}></div>
           </div>
@@ -261,39 +259,39 @@ const [activeLabel, setActiveLabel] = useState(Boolean)
               </div>
             </li>
           </ul>
-            <div>
-              <form className={style.master_form} action="">
+          <div className={style.form}>
+            <form className={style.master_form} action="">
                 <h3 className={style.form_title}>Ready to watch? Enter your email to create or restart your membership.</h3>
-                <div className={style.main_form}>
-                    <div className={style.main_form_input}>
+              <div className={style.main_form}>
+                <div className={style.main_form_input}>
                       <label className={activeLabel === false ? style.form_label : style.form_label_active} htmlFor="">Email address</label>
-                        <input
-                          onChange={e => validateEmail(e.target.value)}
-                          onClick={() => setActiveLabel(true)}
-                          onBlur={(e) => validateEmail(e.target.value) === 1 && e.target.value != "" ? setActiveContent(2) : emailCorrect === 2 ? setActiveContent(1) : setActiveLabel(false)}
-                          className={`${activeContent === 2 && emailValue != "" && emailCorrect === 1 ? style.form_email_false : emailCorrect === 2 ? style.form_email_true : style.form_input}`}
-                          type="email" name="email" id="input" value={emailValue}/>
-                          <div className={activeContent === 2 && emailValue != "" && emailCorrect === 1 ? style.form_email_false_text : style.form_email_true_text}>
-                                <svg width="16" height="16"><path fill="currentColor" fillRule="evenodd" d="M14.5 8C14.5 11.5899 11.5899 14.5 8 14.5C4.41015 14.5 1.5 11.5899 1.5 8C1.5 4.41015 4.41015 1.5 8 1.5C11.5899 1.5 14.5 4.41015 14.5 8ZM16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8ZM4.46967 5.53033L6.93934 8L4.46967 10.4697L5.53033 11.5303L8 9.06066L10.4697 11.5303L11.5303 10.4697L9.06066 8L11.5303 5.53033L10.4697 4.46967L8 6.93934L5.53033 4.46967L4.46967 5.53033Z"/></svg>
+                  <input
+                  onChange={e => validateEmail(e.target.value)}
+                  onClick={() => setActiveLabel(true)}
+                  onBlur={(e) => validateEmail(e.target.value) === 1 && e.target.value != "" ? setActiveContent(2) : emailCorrect === 2 ? setActiveContent(1) : setActiveLabel(false)}
+                  className={`${activeContent === 2 && emailValue != "" && emailCorrect === 1 ? style.form_email_false : emailCorrect === 2 ? style.form_email_true : style.form_input}`}
+                  type="email" name="email" id="input" value={emailValue}/>
+                  <div className={activeContent === 2 && emailValue != "" && emailCorrect === 1 ? style.form_email_false_text : style.form_email_true_text}>
+                    <svg width="16" height="16"><path fill="currentColor" fillRule="evenodd" d="M14.5 8C14.5 11.5899 11.5899 14.5 8 14.5C4.41015 14.5 1.5 11.5899 1.5 8C1.5 4.41015 4.41015 1.5 8 1.5C11.5899 1.5 14.5 4.41015 14.5 8ZM16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8ZM4.46967 5.53033L6.93934 8L4.46967 10.4697L5.53033 11.5303L8 9.06066L10.4697 11.5303L11.5303 10.4697L9.06066 8L11.5303 5.53033L10.4697 4.46967L8 6.93934L5.53033 4.46967L4.46967 5.53033Z"/></svg>
                                 Please enter a valid email address.
-                          </div>
-                      </div>
-                    <div className={style.main_form_button}>
-                        <button className={style.form_button} type="submit">Get Started
-                          <div className={style.form_button_icon}><svg viewBox="0 0 24 24" width="24" height="24"><path  d="M15.5859 12L8.29303 19.2928L9.70725 20.7071L17.7072 12.7071C17.8948 12.5195 18.0001 12.2652 18.0001 12C18.0001 11.7347 17.8948 11.4804 17.7072 11.2928L9.70724 3.29285L8.29303 4.70706L15.5859 12Z"/></svg></div>
-                        </button>
-                    </div>
+                  </div>
                 </div>
-              </form>
-            </div>
+                <div className={style.main_form_button}>
+                        <button className={style.form_button} type="submit">Get Started
+                    <div className={style.form_button_icon}><svg viewBox="0 0 24 24" width="24" height="24"><path  d="M15.5859 12L8.29303 19.2928L9.70725 20.7071L17.7072 12.7071C17.8948 12.5195 18.0001 12.2652 18.0001 12C18.0001 11.7347 17.8948 11.4804 17.7072 11.2928L9.70724 3.29285L8.29303 4.70706L15.5859 12Z"/></svg></div>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
       </section>
       <footer className={style.footer}>
-        <h6 className={style.footer_title}>Questions? Call<a className={style.footer_link}href="">0800 591 3517</a></h6>
+        <h6 className={style.footer_title}>Questions? Call <a className={style.footer_link}href="">0800 591 3517</a></h6>
         <ul className={style.footer_info}>
           <li><a className={style.footer_link} href="">FAQ</a></li>
           <li><a className={style.footer_link} href="">Help Center</a></li>
-          <li><a className={style.footer_link} href="">   Account</a></li>
+          <li><a className={style.footer_link} href="">Account</a></li>
           <li><a className={style.footer_link} href="">Media Center</a></li>
           <li><a className={style.footer_link} href="">Investor Relations</a></li>
           <li><a className={style.footer_link} href="">Jobs</a></li>

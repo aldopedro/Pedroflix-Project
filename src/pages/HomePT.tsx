@@ -266,7 +266,7 @@ const [activeLabel, setActiveLabel] = useState(Boolean)
               </div>
             </li>
           </ul>
-          <div>
+          <div className={style.form}>
             <form className={style.master_form} action="">
               <h3 className={style.form_title}>Quer assistir? Informe seu email para criar ou reiniciar sua assinatura.</h3>
               <div className={style.main_form}>
