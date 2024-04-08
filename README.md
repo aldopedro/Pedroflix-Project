@@ -7,6 +7,6 @@
 - [] MySQL
 - [] Unit Test
 
-# Deploy -> https://pedroaldo.github.io/net-project/
+# Deploy -> https://pedroald0.github.io/Pedroflix-Project/
 
 
