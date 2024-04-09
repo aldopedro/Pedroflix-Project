@@ -491,7 +491,9 @@ html {
     top: 20%;
     left: 13.5%;
   }
-
+  .card_one_mp4 {
+    width: 508px;
+  }
   .card_two,
   .card_three,
   .card_four {
@@ -509,7 +511,7 @@ html {
   }
 
   .card_two_video video {
-    max-width: 85%;
+    max-width: 78%;
   }
 
   .card_three_info {
@@ -695,43 +697,7 @@ html {
   }
 }
 
-@media (max-width: 1280px) {
-  .master_questions {
-    padding: 72px 20px;
-  }
-  .main_header {
-    padding: 0 9.25rem;
-  }
-
-  .master_register {
-    top: 27%;
-  }
-
-  .register_title {
-    font-size: 3.5rem;
-    font-weight: 900;
-  }
-
-  .master_register {
-    max-width: 588px;
-  }
-
-  .form_button {
-    margin-left: 4px;
-  }
-
-  .background,
-  .background_img,
-  .background_shadow {
-    min-height: min(80vh, 45rem);
-  }
-  .active_icon_mobile,
-  .desactive_icon_mobile {
-    display: none;
-  }
-}
-
-@media (max-width:960px) {
+@media (max-width:1280px) {
   .header_logo_title {
     font-size: 38px;
   }
@@ -907,9 +873,15 @@ html {
     width: 74%;
   }
   .card_four_medium_image {
-    width: 520px;
+    width: 480px;
+  }
+  .card_four_small_image {
+    margin-left: 12px;
   }
   .card_four_content {
     width: 50%
+  }
+  .card_one_mp4 {
+    width: 220px;
   }
 }

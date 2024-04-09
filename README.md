@@ -1,4 +1,4 @@
-# Clone Net*flix
+# Clone Streaming
 
 # Using
 - [x] React
@@ -7,6 +7,6 @@
 - [] MySQL
 - [] Unit Test
 
-# Deploy -> https://pedroald0.github.io/Pedroflix-Project/
+# Deploy -> https://pedroald.github.io/Pedroflix-Project/
 
 

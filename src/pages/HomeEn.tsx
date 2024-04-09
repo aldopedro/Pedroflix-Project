@@ -2,6 +2,14 @@
 import { useCallback, useRef, useState } from 'react'
 import style from "./Home.module.css"
 import { useNavigate } from "react-router-dom"
+import backgroundEN from "../assets/background-EN.jpg"
+import cardTwoVideo from "../assets/card-one-video.mp4"
+import tv from "../assets/tv.png"
+import pc from "../assets/pc.png"
+import toon from "../assets/toon.png"
+import cardFour from "../assets/cardfour.png"
+import cardFourSmall from "../assets/cardfour-small-image.jpg"
+
 
 function HomeEn() {
   function portChange() {
@@ -96,7 +104,7 @@ function HomeEn() {
       </div>
       <div className={style.main_background}>
         <div className={style.background}>
-          <img className={style.background_img} src="https://assets.nflxext.com/ffe/siteui/vlv3/7ca5b7c7-20aa-42a8-a278-f801b0d65fa1/539c1d05-ea60-4865-88c5-be28fa1ac8b4/BR-en-20240326-popsignuptwoweeks-perspective_alpha_website_large.jpg" alt="" />
+          <img className={style.background_img} src={backgroundEN} alt="" />
           <div className={style.master_register}>
             <div className={style.main_register}>
               <h1 className={style.register_title}>
@@ -146,17 +154,17 @@ function HomeEn() {
             <p className={style.card_text}>Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
           </div>
           <div className={style.card_one_moldure}>
-            <img className={style.card_one_image} src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png" alt="" />
+            <img className={style.card_one_image} src={tv} alt="" />
             <div className={style.card_one_video}>
-              <video playsInline muted loop autoPlay ><source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v" type="video/mp4" /></video>
+              <video playsInline muted loop autoPlay className={style.card_one_mp4}><source src="https://videos.pexels.com/video-files/4919748/4919748-hd_2048_1080_25fps.mp4" type="video/mp4" /></video>
             </div>
           </div>
         </div>
         <div className={style.card_two}>
           <div className={style.card_two_content}>
-            <img className={style.card_two_image} src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile.png" />
+            <img className={style.card_two_image} src={pc} />
             <div className={style.card_two_video}>
-              <video autoPlay loop muted playsInline><source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices.m4v" type="video/mp4" /></video>
+              <video autoPlay loop muted playsInline><source src={cardTwoVideo} type="video/mp4" /></video>
             </div>
           </div>
           <div className={style.card_info}>
@@ -170,16 +178,16 @@ function HomeEn() {
             <p className={style.card_text}>Send kids on adventures with their favorite characters in a space made just for them—free with your membership.</p>
           </div>
           <div>
-            <img src="https://occ-0-2650-420.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABUIQf-EOyyk3NFohgiSUVv5tl73COXhof_N8Gz2GD6IqJ0Cz-DzUfRzj2NhSocLHDrNUlFL3NK2fDG6MCKzVHt3kCmSOjrf4SuVb.png?r=190" />
+            <img className={style.card_three_image} src={toon} />
           </div>
         </div>
         <div className={style.card_four}>
           <div className={style.card_four_image}>
-            <img className={style.card_four_medium_image} src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg" alt="" />
+            <img className={style.card_four_medium_image} src={cardFour} alt="" />
             <div className={style.card_four_content}>
-              <img className={style.card_four_small_image} src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/boxshot.png" alt="" />
+              <img className={style.card_four_small_image} src={cardFourSmall} alt="" />
               <div className={style.card_four_gif_info}>
-                <p className={style.card_four_gif_title}>Stranger Things</p>
+                <p className={style.card_four_gif_title}>Any Movie</p>
                 <p className={style.card_four_gif_text}>Download in progress...</p>
               </div>
               <div className={style.card_four_gif}></div>
