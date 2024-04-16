@@ -1,0 +1,66 @@
+* {
+    font-family: Netflix Sans;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e6e6e6;
+    align-items: center;
+}
+.headerTitle {
+    font-family: Bebas Neue;
+    font-size: 60px;
+    color: #E50914;
+    margin-left: 3%;
+    cursor: pointer;
+}
+.headerButton {
+    appearance: none;
+    background-color: transparent;
+    font-family: Netflix Sans;
+    color: #333;
+    float: right;
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 90px;
+    margin: 0 3%;
+    cursor: pointer;
+}
+.headerButton:hover {
+    text-decoration: underline;
+}
+.registerAccount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.devices {
+    background: url("../assets/Devices.png") no-repeat 50% 50%;
+    margin: 100px 0 20px;
+    width: 260px;
+    background-size: 260px;
+    height: 90px;
+}
+.step,
+.step > strong {
+    font-size: 13px;
+    text-align: center;
+    color: #333;
+}
+.stepTitle {
+    font-size: 32px;
+    color: #333;
+    max-width: 340px;
+    text-align: center;
+    font-weight: 500;
+    margin: 0 0 .4em;
+}
+.stepDescription {
+    font-size: 18px;
+    color: #333;
+    max-width: 320px;
+    text-align: center;
+    font-weight: 400;
+    
+}

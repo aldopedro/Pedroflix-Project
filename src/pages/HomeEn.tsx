@@ -147,7 +147,7 @@ function HomeEn() {
           <div className={style.background_shadow}></div>
         </div>
       </div>
-      <section>
+      <section className={style.section}>
         <div className={style.card_one}>
           <div className={style.card_info}>
             <h1 className={style.card_title}>Enjoy on your TV</h1>
@@ -199,7 +199,7 @@ function HomeEn() {
           </div>
         </div>
       </section>
-      <section>
+      <section className={style.section}>
         <div className={style.master_questions}>
           <h1 className={style.questions_title}>Frequently Asked Questions</h1>
           <ul className={style.questions}>
@@ -328,6 +328,7 @@ function HomeEn() {
           </div>
         </div>
       </section>
+      <section className={style.section}>
       <footer className={style.footer}>
         <h6 className={style.footer_title}>Questions? Call <a className={style.footer_link} href="">0800 591 3517</a></h6>
         <ul className={style.footer_info}>
@@ -363,6 +364,7 @@ function HomeEn() {
         </div>
         <div><h6 className={style.footer_name}>PedroFlix Brazil</h6></div>
       </footer>
+    </section>
     </div>
   )
 }

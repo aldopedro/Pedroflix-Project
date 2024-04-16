@@ -145,7 +145,7 @@ function HomeBr() {
           <div className={style.background_shadow}></div>
         </div>
       </div>
-      <section>
+      <section className={style.section}>
         <div className={style.card_one}>
           <div className={style.card_info}>
             <h1 className={style.card_title}>Aproveite na TV</h1>
@@ -197,7 +197,7 @@ function HomeBr() {
           </div>
         </div>
       </section>
-      <section>
+      <section className={style.section}>
         <div className={style.master_questions}>
           <h1 className={style.questions_title}>Perguntas frequentes</h1>
           <ul className={style.questions}>
@@ -333,6 +333,7 @@ function HomeBr() {
           </div>
         </div>
       </section>
+      <section className={style.section}>
       <footer className={style.footer}>
         <h6 className={style.footer_title}>Dúvidas? Ligue <a className={style.footer_link} href="">0800 591 2876</a></h6>
         <ul className={style.footer_info}>
@@ -368,6 +369,7 @@ function HomeBr() {
         </div>
         <div><h6 className={style.footer_name}>PedroFlix Brasil</h6></div>
       </footer>
+      </section>
     </div>
   )
 }

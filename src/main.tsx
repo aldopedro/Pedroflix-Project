@@ -8,7 +8,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom"
 const router = createBrowserRouter([
   {
     path: "/Pedroflix-Project/",
-    element: <HomeBr />
+    element: <HomeBr />,
   },
   {
     path: "/Pedroflix-Project/en",
@@ -17,7 +17,7 @@ const router = createBrowserRouter([
   {
     path: "/Pedroflix-Project/register-br",
     element: <RegisterBr />
-  }
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
