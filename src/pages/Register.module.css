@@ -34,6 +34,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding-bottom: 170px;
 }
 .devices {
     background: url("../assets/Devices.png") no-repeat 50% 50%;
@@ -59,8 +60,67 @@
 .stepDescription {
     font-size: 18px;
     color: #333;
-    max-width: 320px;
+    max-width: 340px;
     text-align: center;
     font-weight: 400;
     
+}
+.stepButton {
+    padding: 18px 124px;
+    background-color: #e50914;
+    border-radius: 4px;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: Netflix Sans;
+    color: #FFF;
+    margin-top: 24px;
+}
+.footer {
+    border-top: 1px solid #e6e6e6;
+    background-color: #f3f3f3;
+    padding: 20px 0 30px;
+}
+.footerContent {
+    width: 90%;
+    margin: 0 auto;
+}
+.footerTitle {
+    font-size: 1em;
+    color: #737373;
+    margin: 0 0 30px;
+    font-family: Netflix Sans;
+}
+.footerLink {
+    font-size: 13px;
+    max-width: 1000px;
+    color: #737373;
+}
+.footerLinkItem {
+    list-style: none;
+    display: inline-block;
+    margin-bottom: 16px;
+    padding: 0 22px 0 0;
+    width: 22%;
+}
+.footerSelect {
+    color: #737373;
+    background-color: #FFF;
+    appearance: none;
+    border: 1px solid #a6a6a6;
+    border-radius: 2px;
+    font-size: 16px;
+    font-family: Netflix Sans;
+    height: 46px;
+    padding: 10px 30px 12px 10px;
+}
+.footerMainSelect::before {
+    content: "\eb01";
+    color: #333;
+    font-family: nf-icon;
+    font-size: 16px;
+    left: 15px;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
