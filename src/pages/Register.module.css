@@ -1,3 +1,5 @@
+@import "https://www.nerdfonts.com/assets/css/webfont.css";
+
 * {
     font-family: Netflix Sans;
 }
@@ -79,10 +81,12 @@
     border-top: 1px solid #e6e6e6;
     background-color: #f3f3f3;
     padding: 20px 0 30px;
+    
 }
 .footerContent {
     width: 90%;
     margin: 0 auto;
+    position: relative;
 }
 .footerTitle {
     font-size: 1em;
@@ -111,16 +115,23 @@
     font-size: 16px;
     font-family: Netflix Sans;
     height: 46px;
-    padding: 10px 30px 12px 10px;
+    padding: 10px 32px 12px 40px;
 }
 .footerMainSelect::before {
-    content: "\eb01";
-    color: #333;
-    font-family: nf-icon;
+    color: #444;
     font-size: 16px;
-    left: 15px;
+    top: 128px;
+    left: 14px;
     pointer-events: none;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+}
+.footerMainSelect::after {
+    background-color: #fff;
+    border: 6px solid #fff;
+    border-top-color: rgb(255, 255, 255);
+    border-top-color: #333;
+    content: "";
+    position: absolute;
+    top: 134px;
+    left: 128px;
 }

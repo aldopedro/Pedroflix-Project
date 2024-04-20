@@ -39,7 +39,7 @@ function RegisterBr() {
                         <li className={style.footerLinkItem}>Preferências de cookies</li>
                         <li className={style.footerLinkItem}>Informações corporativas</li>
                     </ul>
-                    <div className={style.footerMainSelect}>
+                    <div className={`nf nf-fa-globe ${style.footerMainSelect}`}>
                         <select onChange={(e) => e.target.value === "pt-BR" ? portChange() : englishChange()} name="LanguageSelect" className={style.footerSelect}>
                             <option lang="pt" label='Português' value="pt-BR" className={style.footerOption}>Português</option>
                             <option lang="en" label='English' value="en-BR" className={style.footerOption}>English</option>
