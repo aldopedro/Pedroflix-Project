@@ -1,9 +1,9 @@
-import style from "./Register.module.css"
+import style from "./register.module.css"
 import { useNavigate } from "react-router-dom"
 
 
 
-function RegisterBr() {
+function registerBr() {
     function backToHome () {
         return navigate ("/Pedroflix-Project/")
     }
@@ -13,9 +13,12 @@ function RegisterBr() {
     function englishChange () {
 
     }
+    function nextStep () {
+        return navigate ("/Pedroflix-Project/register-br/regform")
+    }
     const navigate = useNavigate();
     return (
-        <div>
+        <div className={style.master}>
             <header className={style.header}>
                 <h1 onClick={backToHome} className={style.headerTitle}>PEDROFLIX</h1>
                 <button className={style.headerButton} >Entrar</button>
@@ -25,7 +28,7 @@ function RegisterBr() {
                 <p className={style.step}>PASSO <strong>1</strong> DE <strong>3</strong></p>
                 <h4 className={style.stepTitle}>Termine de configurar sua conta</h4>
                 <h6 className={style.stepDescription}>A Pedroflix é personalizada para você. Crie uma senha para começar a assistir à Pedroflix.</h6>
-                <button className={style.stepButton}>Próximo</button>
+                <button className={style.stepButton} onClick={nextStep} >Próximo</button>
             </section>
             <footer className={style.footer}>
                 <div className={style.footerContent}>
@@ -50,4 +53,4 @@ function RegisterBr() {
         </div>
     )
 } 
-export default RegisterBr
+export default registerBr

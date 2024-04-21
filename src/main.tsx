@@ -1,8 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import HomeBr from "./pages/HomeBr.tsx"
-import HomeEn from "./pages/HomeEn.tsx"
-import RegisterBr from "./pages/RegisterBr.tsx"
+import HomeBr from "./pages/Home/homeBr.tsx"
+import HomeEn from "./pages/Home/homeEn.tsx"
+import RegisterBr from "./pages/Registration/registerBr.tsx"
+import RegisterFormBr from './pages/Registration/registerFormBr.tsx'
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 
 const router = createBrowserRouter([
@@ -12,11 +13,15 @@ const router = createBrowserRouter([
   },
   {
     path: "/Pedroflix-Project/en",
-    element: <HomeEn />
+    element: <HomeEn />,
   },
   {
     path: "/Pedroflix-Project/register-br",
-    element: <RegisterBr />
+    element: <RegisterBr />,
+  },
+  {
+    path: "Pedroflix-Project/register-br/regform",
+    element: <RegisterFormBr />,
   },
 ]);
 
