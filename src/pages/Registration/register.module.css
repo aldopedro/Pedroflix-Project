@@ -242,6 +242,7 @@
     outline-color: #FFFFFF;
     line-height: 1.8;
     font: inherit;
+    margin-top: 16px;
 }
 
 .form_label {
@@ -252,7 +253,7 @@
     line-height: 1.5;
     transition-timing-function: cubic-bezier(0.9, 0, 0.51, 1);
     transition-duration: 250ms;
-    top: 224px;
+    top: 240px;
     left: 16px;
     pointer-events: none;
     color: #333;
@@ -266,7 +267,7 @@
     line-height: 1.5;
     transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
     transition-duration: 250ms;
-    top: 216px;
+    top: 232px;
     left: 16px;
     font-family: inherit;
     pointer-events: none;
