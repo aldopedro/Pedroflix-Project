@@ -83,7 +83,7 @@ function homeEn() {
               <div className={style.master_form}>
                 <form action="">
                   <h3 className={style.form_title}>Ready to watch? Enter your email to create or restart your membership.</h3>
-                  <InputEmail />
+                  <InputEmail buttonText="Get Started" displayButton='' inputStyle=''/>
                 </form>
               </div>
             </div>
@@ -253,7 +253,7 @@ function homeEn() {
           <div className={style.form}>
             <form className={style.master_form} action="">
               <h3 className={style.form_title}>Ready to watch? Enter your email to create or restart your membership.</h3>
-              <InputEmail />
+              <InputEmail buttonText="Get Started" displayButton='' inputStyle=''/>
             </form>
           </div>
         </div>

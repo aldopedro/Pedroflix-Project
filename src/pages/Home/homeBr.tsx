@@ -82,7 +82,7 @@ function homeBr() {
               <div className={style.master_form}>
                 <form action="">
                   <h3 className={style.form_title}>Quer assistir? Informe seu email para criar ou reiniciar sua assinatura.</h3>
-                  <InputEmail />
+                  <InputEmail buttonText="Vamos lá" displayButton="" inputStyle=""/>
                 </form>
               </div>
             </div>
@@ -104,7 +104,7 @@ function homeBr() {
           <div className={style.card_one_moldure}>
             <img className={style.card_one_image} src={tv} alt="" />
             <div className={style.card_one_video}>
-              <video playsInline muted loop autoPlay className={style.card_one_mp4}><source src="https://videos.pexels.com/video-files/4919748/4919748-hd_2048_1080_25fps.mp4" type="video/mp4" /></video>
+              <video playsInline muted loop autoPlay className={style.card_one_mp4}><source  src="https://videos.pexels.com/video-files/4919748/4919748-hd_2048_1080_25fps.mp4" type="video/mp4" /></video>
             </div>
           </div>
         </div>
@@ -258,46 +258,46 @@ function homeBr() {
           </ul>
           <div className={style.form}>
             <h3 className={style.form_title}>Quer assistir? Informe seu email para criar ou reiniciar sua assinatura.</h3>
-            <InputEmail />
+            <InputEmail buttonText="Vamos lá" displayButton="" inputStyle=""/>
           </div>
         </div>
       </section>
       <section className={style.section}>
-        <footer className={style.footer}>
-          <h6 className={style.footer_title}>Dúvidas? Ligue <a className={style.footer_link} href="">0800 591 2876</a></h6>
-          <ul className={style.footer_info}>
-            <li><a className={style.footer_link} href="">Perguntas frequentes</a></li>
-            <li><a className={style.footer_link} href="">Central de Ajuda</a></li>
-            <li><a className={style.footer_link} href="">Conta</a></li>
-            <li><a className={style.footer_link} href="">Media Center</a></li>
-            <li><a className={style.footer_link} href="">Relações com investidores</a></li>
-            <li><a className={style.footer_link} href="">Carreiras</a></li>
-            <li><a className={style.footer_link} href="">Resgatar cartão pré-pago</a></li>
-            <li><a className={style.footer_link} href="">Comprar cartão pré-pago</a></li>
-            <li><a className={style.footer_link} href="">Formas de assistir</a></li>
-            <li><a className={style.footer_link} href="">Termos de Uso</a></li>
-            <li><a className={style.footer_link} href="">Privacidade</a></li>
-            <li><a className={style.footer_link} href="">Preferências de cookies</a></li>
-            <li><a className={style.footer_link} href="">Informações corporativas</a></li>
-            <li><a className={style.footer_link} href="">Entre em contato</a></li>
-            <li><a className={style.footer_link} href="">Teste de velocidade</a></li>
-            <li><a className={style.footer_link} href="">Avisos legais</a></li>
-            <li><a className={style.footer_link} href="">Só na PedroFlix</a></li>
-          </ul>
-          <div className={style.main_header_language}>
-            <div role="img" aria-hidden="true" className={style.header_language}>
-              <svg fill="currentColor" height="16" width="16" aria-hidden="true" viewBox="0 0 16 16"><path d='M10.7668 5.33333L10.5038 5.99715L9.33974 8.9355L8.76866 10.377L7.33333 14H9.10751L9.83505 12.0326H13.4217L14.162 14H16L12.5665 5.33333H10.8278H10.7668ZM10.6186 9.93479L10.3839 10.5632H11.1036H12.8856L11.6348 7.2136L10.6186 9.93479ZM9.52722 4.84224C9.55393 4.77481 9.58574 4.71045 9.62211 4.64954H6.41909V2H4.926V4.64954H0.540802V5.99715H4.31466C3.35062 7.79015 1.75173 9.51463 0 10.4283C0.329184 10.7138 0.811203 11.2391 1.04633 11.5931C2.55118 10.6795 3.90318 9.22912 4.926 7.57316V12.6667H6.41909V7.51606C6.81951 8.15256 7.26748 8.76169 7.7521 9.32292L8.31996 7.88955C7.80191 7.29052 7.34631 6.64699 6.9834 5.99715H9.06968L9.52722 4.84224Z'></path></svg>
-              <select onChange={(e) => e.target.value === "pt-BR" ? portChange() : englishChange()} name="LanguageSelect" id="LanguageChange">
-                <option lang="pt" label='Português' value="pt-BR">Português</option>
-                <option lang="en" label='English' value="en-BR">English</option>
-              </select>
-              <div className={style.header_icon}>
-                <svg width="16" height="16"><path fill="currentColor" d="M11.5976 6.5C11.7461 6.5 11.8204 6.67956 11.7154 6.78457L8.23574 10.2643C8.10555 10.3945 7.89445 10.3945 7.76425 10.2643L4.28457 6.78457C4.17956 6.67956 4.25393 6.5 4.40244 6.5H11.5976Z" /></svg>
-              </div>
+      <footer className={style.footer}>
+        <h6 className={style.footer_title}>Dúvidas? Ligue <a className={style.footer_link} href="">0800 591 2876</a></h6>
+        <ul className={style.footer_info}>
+          <li><a className={style.footer_link} href="">Perguntas frequentes</a></li>
+          <li><a className={style.footer_link} href="">Central de Ajuda</a></li>
+          <li><a className={style.footer_link} href="">Conta</a></li>
+          <li><a className={style.footer_link} href="">Media Center</a></li>
+          <li><a className={style.footer_link} href="">Relações com investidores</a></li>
+          <li><a className={style.footer_link} href="">Carreiras</a></li>
+          <li><a className={style.footer_link} href="">Resgatar cartão pré-pago</a></li>
+          <li><a className={style.footer_link} href="">Comprar cartão pré-pago</a></li>
+          <li><a className={style.footer_link} href="">Formas de assistir</a></li>
+          <li><a className={style.footer_link} href="">Termos de Uso</a></li>
+          <li><a className={style.footer_link} href="">Privacidade</a></li>
+          <li><a className={style.footer_link} href="">Preferências de cookies</a></li>
+          <li><a className={style.footer_link} href="">Informações corporativas</a></li>
+          <li><a className={style.footer_link} href="">Entre em contato</a></li>
+          <li><a className={style.footer_link} href="">Teste de velocidade</a></li>
+          <li><a className={style.footer_link} href="">Avisos legais</a></li>
+          <li><a className={style.footer_link} href="">Só na PedroFlix</a></li>
+        </ul>
+        <div className={style.main_header_language}>
+          <div role="img" aria-hidden="true" className={style.header_language}>
+            <svg fill="currentColor" height="16" width="16" aria-hidden="true" viewBox="0 0 16 16"><path d='M10.7668 5.33333L10.5038 5.99715L9.33974 8.9355L8.76866 10.377L7.33333 14H9.10751L9.83505 12.0326H13.4217L14.162 14H16L12.5665 5.33333H10.8278H10.7668ZM10.6186 9.93479L10.3839 10.5632H11.1036H12.8856L11.6348 7.2136L10.6186 9.93479ZM9.52722 4.84224C9.55393 4.77481 9.58574 4.71045 9.62211 4.64954H6.41909V2H4.926V4.64954H0.540802V5.99715H4.31466C3.35062 7.79015 1.75173 9.51463 0 10.4283C0.329184 10.7138 0.811203 11.2391 1.04633 11.5931C2.55118 10.6795 3.90318 9.22912 4.926 7.57316V12.6667H6.41909V7.51606C6.81951 8.15256 7.26748 8.76169 7.7521 9.32292L8.31996 7.88955C7.80191 7.29052 7.34631 6.64699 6.9834 5.99715H9.06968L9.52722 4.84224Z'></path></svg>
+            <select onChange={(e) => e.target.value === "pt-BR" ? portChange() : englishChange()} name="LanguageSelect" id="LanguageChange">
+              <option lang="pt" label='Português' value="pt-BR">Português</option>
+              <option lang="en" label='English' value="en-BR">English</option>
+            </select>
+            <div className={style.header_icon}>
+              <svg width="16" height="16"><path fill="currentColor" d="M11.5976 6.5C11.7461 6.5 11.8204 6.67956 11.7154 6.78457L8.23574 10.2643C8.10555 10.3945 7.89445 10.3945 7.76425 10.2643L4.28457 6.78457C4.17956 6.67956 4.25393 6.5 4.40244 6.5H11.5976Z" /></svg>
             </div>
           </div>
-          <div><h6 className={style.footer_name}>PedroFlix Brasil</h6></div>
-        </footer>
+        </div>
+        <div><h6 className={style.footer_name}>PedroFlix Brasil</h6></div>
+      </footer>
       </section>
     </div>
   )
