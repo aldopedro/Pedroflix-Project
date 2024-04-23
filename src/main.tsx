@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import HomeBr from "./pages/Home/homeBr.tsx"
 import HomeEn from "./pages/Home/homeEn.tsx"
 import RegisterBr from "./pages/Registration/registerBr.tsx"
-import RegisterFormBr from './pages/Registration/RegisterFormBr.tsx'
+import RegisterFormBr from './pages/Registration/registerFormBr.tsx'
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 
 const router = createBrowserRouter([

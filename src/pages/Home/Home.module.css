@@ -581,6 +581,7 @@
 
   .questions {
     max-width: 1172px;
+    margin-bottom: 8px;
   }
 
   .desactive_info {

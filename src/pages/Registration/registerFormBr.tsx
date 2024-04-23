@@ -3,12 +3,9 @@ import { useNavigate } from "react-router-dom"
 import { useState } from "react";
 import { useRef } from "react";
 import RegistrationFooter from "../../components/RegistrationFooter"
+import RegistrationHeader from "../../components/RegistrationHeader";
 
 function registerFormBr() {
-    function backToHome() {
-        return navigate("/Pedroflix-Project/")
-    }
-    const navigate = useNavigate();
 function validateEmail(email: string) {
     const validate = new RegExp(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)
     if (!validate.test(email)) {
@@ -28,10 +25,7 @@ function validateEmail(email: string) {
     const [activeLabel, setActiveLabel] = useState(Boolean)
     return (
         <div className={style.master}>
-            <header className={style.header}>
-                <h1 onClick={backToHome} className={style.headerTitle}>PEDROFLIX</h1>
-                <button className={style.headerButton} >Entrar</button>
-            </header>
+            <RegistrationHeader />
             <section className={style.registerAccount}>
                 <div className={style.register}>
                     <p className={style.formStep}>PASSO <strong>1</strong> DE <strong>3</strong></p>

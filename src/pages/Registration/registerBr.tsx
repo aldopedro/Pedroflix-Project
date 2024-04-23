@@ -1,22 +1,17 @@
 import style from "./register.module.css"
 import { useNavigate } from "react-router-dom"
 import RegistrationFooter from "../../components/RegistrationFooter"
+import RegistrationHeader from "../../components/RegistrationHeader";
 
 
 function registerBr() {
-    function backToHome () {
-        return navigate ("/Pedroflix-Project/")
-    }
     function nextStep () {
         return navigate ("/Pedroflix-Project/register-br/regform")
     }
     const navigate = useNavigate();
     return (
         <div className={style.master}>
-            <header className={style.header}>
-                <h1 onClick={backToHome} className={style.headerTitle}>PEDROFLIX</h1>
-                <button className={style.headerButton} >Entrar</button>
-            </header>
+            <RegistrationHeader/>
             <section className={style.registerAccount}>
                 <div className={style.devices}></div>
                 <p className={style.step}>PASSO <strong>1</strong> DE <strong>3</strong></p>
