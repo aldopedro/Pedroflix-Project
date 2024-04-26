@@ -359,7 +359,7 @@
   .form_input {
     width: 91%;
     display: flex;
-    background-color: inherit;
+    background-color: rgba(22, 22, 22, 0.7);
     border-radius: 4px;
     padding: 26px 16px 8px;
     color: inherit;

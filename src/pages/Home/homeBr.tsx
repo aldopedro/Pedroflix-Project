@@ -82,7 +82,7 @@ function homeBr() {
               <div className={style.master_form}>
                 <form action="">
                   <h3 className={style.form_title}>Quer assistir? Informe seu email para criar ou reiniciar sua assinatura.</h3>
-                  <InputEmail buttonText="Vamos lá" displayButton="" inputStyle=""/>
+                  <InputEmail buttonText="Vamos lá" />
                 </form>
               </div>
             </div>
@@ -258,7 +258,7 @@ function homeBr() {
           </ul>
           <div className={style.form}>
             <h3 className={style.form_title}>Quer assistir? Informe seu email para criar ou reiniciar sua assinatura.</h3>
-            <InputEmail buttonText="Vamos lá" displayButton="" inputStyle=""/>
+            <InputEmail buttonText="Vamos lá"/>
           </div>
         </div>
       </section>
