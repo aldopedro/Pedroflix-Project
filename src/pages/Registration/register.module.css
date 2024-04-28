@@ -274,3 +274,20 @@
     pointer-events: none;
     color: #333;
 }
+.mainInput {
+    position: relative
+}
+.passwordLabelTrue {
+    position: absolute;
+    top: 10px;
+    left: 16px;
+    font-size: 12px;
+    transition-duration: 250ms;
+}
+.passwordLabelFalse {
+    position: absolute;
+    top: 18px;
+    left: 16px;
+    pointer-events: none;
+    transition-duration: 250ms;
+}
