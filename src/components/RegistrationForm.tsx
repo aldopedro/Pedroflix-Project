@@ -1,8 +1,14 @@
 import style from "../pages/Registration/register.module.css"
-import { useState, useRef } from "react";
+import { useState } from "react";
 
 
 function RegistrationForm() {
+  function validateAll () {
+    if(emailCorrect === 2 && correctBorder === true) {
+      console.log("teste")
+    }
+  }
+
   function validateEmail(email: string) {
     const validate = new RegExp(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)
     if (!validate.test(email)) {
@@ -16,6 +22,7 @@ function RegistrationForm() {
     }
   }
 
+
   function validatePass(password: string) {
     const validateUppercase = new RegExp(/^(?=.*[A-Z]).+$/)
     const validateLowercase = new RegExp(/^(?=.*[a-z]).+$/)
@@ -23,31 +30,37 @@ function RegistrationForm() {
 
     if (validateUppercase.test(password) && validateLowercase.test(password)) {
       setValidateUppercase(true)
-    } else
+    } else {
       setValidateUppercase(false)
-    if (validateNumber.test(password)) {
+    } if (validateNumber.test(password)) {
       setValidateNumber(true)
-    } else setValidateNumber (false)
-    if (validateUppercase.test(password) && validateNumber.test(password)) {
-      setValidatePassword(true)
+    } else {
+      setValidateNumber(false)
     }
+    if (validateUppercase.test(password) && validateLowercase.test(password) && validateNumber.test(password)){
+      setCorrectBorder(true)
+      setPassword(password)
+      return true
+    }
+    setPassword(password)
+    setCorrectBorder(false)
+    return false
   }
 
   const [emailCorrect, setEmailCorrect] = useState(Number)
   const [emailValue, setEmailValue] = useState(String)
   const [activeLabel, setActiveLabel] = useState(Boolean)
-  const emailInputRef = useRef<HTMLInputElement>(null);
   const [activeContent, setActiveContent] = useState(Number)
 
   const [activeLabelPassword, setActiveLabelPassword] = useState(Boolean)
-  const [validatePassword, setValidatePassword] = useState(Boolean)
   const [validateUppercase, setValidateUppercase] = useState(Boolean)
   const [validateNumber, setValidateNumber] = useState(Boolean)
-
+  const [correctBorder, setCorrectBorder] = useState(Boolean)
+  const [password, setPassword] = useState(String)
   return (
-    <div>
+    <form action="" method="post">
       <label className={activeLabel === false ? style.form_label : style.form_label_active} htmlFor="">Email</label>
-      <input ref={emailInputRef}
+      <input
         onChange={e => validateEmail(e.target.value)}
         onClick={() => setActiveLabel(true)}
         onBlur={(e) => validateEmail(e.target.value) === 1 && e.target.value != "" ? setActiveContent(2) : emailCorrect === 2 ? setActiveContent(1) : setActiveLabel(false)}
@@ -60,13 +73,19 @@ function RegistrationForm() {
       <div className={style.mainInput}>
         <label className={activeLabelPassword === true ? style.passwordLabelTrue : style.passwordLabelFalse} htmlFor="">Adicione uma senha</label>
         <input onClick={() => setActiveLabelPassword(true)}
-          onBlur={(e) => e.target.value === "" ? setActiveLabelPassword(false) : setActiveLabelPassword(true)}
-          onChange={e => validatePass(e.target.value)}
-          type="password" className={style.form_input} />
-          <p>Informe uma senha com pelo menos uma letra maiúscula e uma minúscula</p>
-          <p>Informe uma senha com pelo menos um número</p>
+          onChange={(e) => validatePass(e.target.value)}
+          onBlur={(e) => validatePass(e.target.value) === false && e.target.value === "" ? setActiveLabelPassword(false) : validatePass(e.target.value) === true && e.target.value != "" ? setActiveLabelPassword(true) : setCorrectBorder(true)} 
+          className={`${(validateUppercase === false || validateNumber === false) && password != "" && correctBorder === true ? style.borderPasswordFalse : validateUppercase === true && validateNumber === true ? style.borderPasswordTrue : style.form_input}`}
+          type="password" name="password" value={password}/>
+        <p className={validateUppercase === false && password != "" && correctBorder === true ? style.passwordIncorrect : style.passwordCorrect}>Informe uma senha com pelo menos uma letra maiúscula e uma minúscula</p>
+        <p className={validateNumber === false && password != "" && correctBorder === true ? style.passwordIncorrect : style.passwordCorrect}>Informe uma senha com pelo menos um número</p>
       </div>
-    </div>
+      <div>
+        <button className={style.form_button}type="submit" onClick={validateAll}>Registrar
+          <div className={style.form_button_icon}><svg viewBox="0 0 24 24" width="24" height="24"><path d="M15.5859 12L8.29303 19.2928L9.70725 20.7071L17.7072 12.7071C17.8948 12.5195 18.0001 12.2652 18.0001 12C18.0001 11.7347 17.8948 11.4804 17.7072 11.2928L9.70724 3.29285L8.29303 4.70706L15.5859 12Z" /></svg></div>
+        </button>
+      </div>
+    </form>
   )
 }
 export default RegistrationForm

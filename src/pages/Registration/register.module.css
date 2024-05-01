@@ -195,8 +195,8 @@
 
 .form_input:focus,
 .form_email_false:focus,
-.form_email_true:focus {
-    outline: 2px solid #FFF;
+.form_email_true:focus{
+    outline: 2px solid #333;
     border-radius: 4px;
     outline-offset: 2px;
 }
@@ -205,16 +205,22 @@
     display: none;
 }
 
-.form_email_true {
+.form_email_true,
+.borderPasswordTrue {
     border: 1px solid rgb(43, 184, 113);
 }
 
-.form_email_false {
+.form_email_false,
+.borderPasswordFalse {
     border: 1px solid rgb(235, 57, 66);
 }
 
 .form_input {
     border: 1px solid rgba(128, 128, 128, 0.7);
+}
+.borderPasswordTrue:focus,
+.borderPasswordFalse:focus {
+    outline: none;
 }
 
 .form_email_false_text {
@@ -234,13 +240,14 @@
 
 .form_email_false,
 .form_email_true,
+.borderPasswordTrue,
+.borderPasswordFalse,
 .form_input {
     width: 91%;
     display: flex;
     border-radius: 4px;
     padding: 26px 16px 8px;
-    color: inherit;
-    outline-color: #FFFFFF;
+    outline-offset: 2px;
     line-height: 1.8;
     font: inherit;
     margin-top: 16px;
@@ -290,4 +297,14 @@
     left: 16px;
     pointer-events: none;
     transition-duration: 250ms;
+}
+.passwordIncorrect {
+    font-size: 13px;
+    font-weight: 300;
+    color: #e50914;
+    margin-top: 6px;
+    margin-left: 6px;
+}
+.passwordCorrect {
+    display: none;
 }
