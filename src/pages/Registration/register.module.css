@@ -195,7 +195,7 @@
 
 .form_input:focus,
 .form_email_false:focus,
-.form_email_true:focus{
+.form_email_true:focus {
     outline: 2px solid #333;
     border-radius: 4px;
     outline-offset: 2px;
@@ -218,6 +218,7 @@
 .form_input {
     border: 1px solid rgba(128, 128, 128, 0.7);
 }
+
 .borderPasswordTrue:focus,
 .borderPasswordFalse:focus {
     outline: none;
@@ -281,9 +282,11 @@
     pointer-events: none;
     color: #333;
 }
+
 .mainInput {
     position: relative
 }
+
 .passwordLabelTrue {
     position: absolute;
     top: 10px;
@@ -291,6 +294,7 @@
     font-size: 12px;
     transition-duration: 250ms;
 }
+
 .passwordLabelFalse {
     position: absolute;
     top: 18px;
@@ -298,6 +302,7 @@
     pointer-events: none;
     transition-duration: 250ms;
 }
+
 .passwordIncorrect {
     font-size: 13px;
     font-weight: 300;
@@ -305,6 +310,29 @@
     margin-top: 6px;
     margin-left: 6px;
 }
+
 .passwordCorrect {
     display: none;
+}
+
+.form_button {
+    border-radius: 4px;
+    background-color: rgb(229, 9, 20);
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 500;
+    min-height: 56px;
+    padding: 12px 24px;
+    font-family: inherit;
+    cursor: pointer;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.9, 0, 0.51, 1);
+    width: 99%;
+    margin-top: 16px;
+    margin-bottom: 70px;
+}
+
+.form_button:hover {
+    transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
+    background: rgb(193, 17, 25);
 }
