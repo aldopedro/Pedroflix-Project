@@ -3,23 +3,28 @@ import { useState } from "react";
 
 
 function RegistrationForm() {
-  function validateAll () {
+  async function validateAll (e:any) {
     if(emailCorrect === 2 && correctBorder === true) {
-      console.log("teste")
-      event?.preventDefault()
+      e.preventDefault()
+      fetch('http://localhost:8081', {
+        method: 'POST',
+        headers: {"Content-Type": "application/json"},
+        body:JSON.stringify(user)
+      }).then(() => {})
     }
-    event?.preventDefault()
-    console.log("teste")
+    e.preventDefault()
   }
 
   function validateEmail(email: string) {
     const validate = new RegExp(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)
     if (!validate.test(email)) {
       setEmailValue(email);
+      setUser({...user, email: emailValue, password: password})
       setEmailCorrect(1);
       return 1;
     } else {
       setEmailCorrect(2);
+      setUser({...user, email: emailValue, password: password})
       setEmailValue(email);
       return 2;
     }
@@ -49,7 +54,10 @@ function RegistrationForm() {
     setCorrectBorder(false)
     return false
   }
-
+  const [user, setUser] = useState({
+    email: '',
+    password: ''
+  })
   const [emailCorrect, setEmailCorrect] = useState(Number)
   const [emailValue, setEmailValue] = useState(String)
   const [activeLabel, setActiveLabel] = useState(Boolean)
@@ -61,7 +69,7 @@ function RegistrationForm() {
   const [correctBorder, setCorrectBorder] = useState(Boolean)
   const [password, setPassword] = useState(String)
   return (
-    <form action="" method="post">
+    <form action="" onSubmit={async (e) => await validateAll(e)} method="post">
       <label className={activeLabel === false ? style.form_label : style.form_label_active} htmlFor="">Email</label>
       <input
         onChange={e => validateEmail(e.target.value) && e.target.value != "" ? setActiveLabel(true) : setActiveLabel(false)}
@@ -84,7 +92,7 @@ function RegistrationForm() {
         <p className={validateNumber === false && password != "" && correctBorder === true ? style.passwordIncorrect : style.passwordCorrect}>Informe uma senha com pelo menos um número</p>
       </div>
       <div>
-        <button className={style.form_button}type="submit" onClick={validateAll}>Registrar</button>
+        <button className={style.form_button}type="submit" onClick={validateAll}>Próximo</button>
       </div>
     </form>
   )
