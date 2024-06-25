@@ -154,10 +154,14 @@
     padding: 10px 32px 12px 40px;
 }
 
+.footerMainSelect {
+    position: relative;
+}
+
 .footerMainSelect::before {
     color: #444;
     font-size: 16px;
-    top: 128px;
+    top: 14px;
     left: 14px;
     pointer-events: none;
     position: absolute;
@@ -170,7 +174,7 @@
     border-top-color: #333;
     content: "";
     position: absolute;
-    top: 134px;
+    top: 20px;
     left: 128px;
     pointer-events: none;
 }
@@ -262,7 +266,7 @@
     line-height: 1.5;
     transition-timing-function: cubic-bezier(0.9, 0, 0.51, 1);
     transition-duration: 250ms;
-    top: 240px;
+    top: 32px;
     left: 16px;
     pointer-events: none;
     color: #333;
@@ -276,7 +280,7 @@
     line-height: 1.5;
     transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
     transition-duration: 250ms;
-    top: 232px;
+    top: 24px;
     left: 16px;
     font-family: inherit;
     pointer-events: none;
@@ -335,4 +339,37 @@
 .form_button:hover {
     transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
     background: rgb(193, 17, 25);
+}
+
+.mainForm {
+    position: relative;
+}
+
+@media (max-width:400px) {
+    .headerTitle{
+        font-size: 52px;
+    }
+    .stepTitle {
+        font-size: 24px;
+    }
+    .stepDescription {
+        font-size: 14px;
+        margin: 0 20px;
+    }
+    .stepButton {
+        padding: 18px 30%;
+    }
+    .register {
+        max-width: 240px;
+    }
+    .form_input,
+    .borderPasswordTrue,
+    .form_email_true,
+    .form_email_false,
+    .borderPasswordFalse {
+        padding: 26px 10px 8px;
+    }
+    .registerAccount{
+        padding-bottom: 60px;
+    }
 }

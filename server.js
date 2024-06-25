@@ -29,7 +29,6 @@ app.post('/', async (req,res) => {
     const email = req.body.email
     const password = req.body.password
     con.query(`INSERT INTO user (email, password) VALUES (?, ?)`,[email,password]);
-    res.send()
 })
 
 app.listen(8081);

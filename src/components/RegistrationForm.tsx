@@ -69,7 +69,7 @@ function RegistrationForm() {
   const [correctBorder, setCorrectBorder] = useState(Boolean)
   const [password, setPassword] = useState(String)
   return (
-    <form action="" onSubmit={async (e) => await validateAll(e)} method="post">
+    <form className={style.mainForm} action="" onSubmit={async (e) => await validateAll(e)} method="post">
       <label className={activeLabel === false ? style.form_label : style.form_label_active} htmlFor="">Email</label>
       <input
         onChange={e => validateEmail(e.target.value) && e.target.value != "" ? setActiveLabel(true) : setActiveLabel(false)}
