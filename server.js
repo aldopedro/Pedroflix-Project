@@ -23,12 +23,21 @@ app.get('/', (req, res) => {
     con.query("SELECT * FROM user", (err, result) => {
         res.send(result);
     })
-  })
+})
 
-app.post('/', async (req,res) => {
+app.post('/add_user', async (req, res) => {
+    const emailRegex = new RegExp(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)
     const email = req.body.email
     const password = req.body.password
-    con.query(`INSERT INTO user (email, password) VALUES (?, ?)`,[email,password]);
+    if (emailRegex.test(email)) {
+        con.query(`SELECT * FROM user WHERE email = ?`, [email], (err, result) => {
+            const validateEmail = result
+            if (validateEmail[0] === undefined) {
+                con.query(`INSERT INTO user (email, password) VALUES (?, ?)`, [email, password])
+           }
+            else console.log("email já cadastrado")
+        })
+    }
 })
 
 app.listen(8081);

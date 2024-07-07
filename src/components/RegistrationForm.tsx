@@ -6,7 +6,7 @@ function RegistrationForm() {
   async function validateAll (e:any) {
     if(emailCorrect === 2 && correctBorder === true) {
       e.preventDefault()
-      fetch('http://localhost:8081', {
+      fetch('http://localhost:8081/add_user', {
         method: 'POST',
         headers: {"Content-Type": "application/json"},
         body:JSON.stringify(user)

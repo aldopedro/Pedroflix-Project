@@ -345,7 +345,7 @@
     position: relative;
 }
 
-@media (max-width:400px) {
+@media (max-width:480px) {
     .headerTitle{
         font-size: 52px;
     }
@@ -360,14 +360,14 @@
         padding: 18px 30%;
     }
     .register {
-        max-width: 240px;
+        max-width: 90%;
     }
     .form_input,
     .borderPasswordTrue,
     .form_email_true,
     .form_email_false,
     .borderPasswordFalse {
-        padding: 26px 10px 8px;
+        padding: 26px 4% 8px;
     }
     .registerAccount{
         padding-bottom: 60px;
