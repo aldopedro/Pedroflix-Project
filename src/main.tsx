@@ -5,6 +5,8 @@ import HomeEn from "./pages/Home/homeEn.tsx"
 import RegisterBr from "./pages/Registration/registerBr.tsx"
 import RegisterFormBr from './pages/Registration/registerFormBr.tsx'
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import RegisterEn from './pages/Registration/registerEn.tsx'
+import RegisterFormEn from './pages/Registration/registerFormEn.tsx'
 
 const router = createBrowserRouter([
   {
@@ -22,6 +24,14 @@ const router = createBrowserRouter([
   {
     path: "Pedroflix-Project/register-br/regform",
     element: <RegisterFormBr />,
+  },
+  {
+    path: "Pedroflix-Project/register-en",
+    element: <RegisterEn />
+  },
+  {
+    path: "Pedroflix-Project/register-en/regform",
+    element: <RegisterFormEn />
   },
 ]);
 

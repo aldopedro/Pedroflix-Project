@@ -4,19 +4,20 @@ import RegistrationHeader from "../../components/RegistrationHeader";
 import RegistrationForm from "../../components/RegistrationForm"
 
 function registerFormBr() {
-    
+
     return (
         <div className={style.master}>
-            <RegistrationHeader language="pt"/>
+            <RegistrationHeader language="en"/>
             <section className={style.registerAccount}>
                 <div className={style.register}>
                     <p className={style.formStep}>PASSO <strong>2</strong> DE <strong>3</strong></p>
-                    <h4 className={style.titleStep}>Crie uma senha para iniciar sua assinatura</h4>
-                    <h6 className={style.descriptionStep}>Faltam só mais alguns passos! <br />Nós também detestamos formulários.</h6>
-                    <RegistrationForm language='pt'></RegistrationForm>
+                    <h4 className={style.titleStep}>Create a password to start your membership</h4>
+                    <h6 className={style.descriptionStep}>Just a few more steps and you're done!<br />
+                        We hate paperwork, too.</h6>
+                    <RegistrationForm language="en"/>
                 </div>
             </section>
-            <RegistrationFooter language='pt'/>
+            <RegistrationFooter language="en"/>
         </div>
     )
 }
