@@ -256,6 +256,7 @@
     line-height: 1.8;
     font: inherit;
     margin-top: 16px;
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
 }
 
 .form_label {
@@ -369,6 +370,7 @@
     .borderPasswordFalse {
         padding: 26px 4% 8px;
         background-color: transparent;
+        -webkit-box-shadow: 0 0 0px 1000px white inset;
     }
     .registerAccount{
         padding-bottom: 60px;

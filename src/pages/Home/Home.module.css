@@ -285,6 +285,7 @@
     top: 16px;
     left: 16px;
     pointer-events: none;
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
   }
 
   .form_label_active {
@@ -299,6 +300,7 @@
     left: 16px;
     font-family: inherit;
     pointer-events: none;
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
   }
 
   .form_validate_active {
@@ -321,6 +323,7 @@
     border-radius: 4px;
     outline-offset: 2px;
     color: inherit;
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
   }
 
   .form_email_true_text {
@@ -330,6 +333,7 @@
   .form_email_true {
     border: 1px solid rgb(43, 184, 113);
     background-color: transparent;
+    
   }
 
   .form_email_false {
