@@ -53,6 +53,11 @@
   color: #FFF;
 }
 
+html {
+  overflow-x: hidden;
+  background-color: #000;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -285,7 +290,7 @@
     top: 16px;
     left: 16px;
     pointer-events: none;
-    -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+    
   }
 
   .form_label_active {
@@ -300,7 +305,7 @@
     left: 16px;
     font-family: inherit;
     pointer-events: none;
-    -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+    
   }
 
   .form_validate_active {
@@ -322,9 +327,8 @@
     outline: 2px solid #FFF;
     border-radius: 4px;
     outline-offset: 2px;
-    color: inherit;
-    -webkit-box-shadow: 0 0 0px 1000px transparent inset;
-  }
+    color: WHITE;
+    }
 
   .form_email_true_text {
     display: none;
@@ -332,12 +336,12 @@
 
   .form_email_true {
     border: 1px solid rgb(43, 184, 113);
-    background-color: transparent;
-    
+    color: white;
   }
 
   .form_email_false {
     border: 1px solid rgb(235, 57, 66);
+    color: white;
   }
 
   .form_input {
@@ -364,14 +368,15 @@
   .form_input {
     width: 91%;
     display: flex;
-    background-color: rgba(22, 22, 22, 0.7);
     border-radius: 4px;
     padding: 26px 16px 8px;
-    color: inherit;
+    color: white;
     outline-color: #FFFFFF;
     line-height: 1.8;
     font: inherit;
-
+    background-color: rgba(22, 22, 22, 0.7);
+    -webkit-box-shadow: 0 0 0px 1000px black inset;
+    -webkit-text-fill-color: white !important;
   }
 
   .form_button_icon {
@@ -703,6 +708,11 @@
 }
 
 @media (max-width:1280px) {
+  .form_input {
+    border: 1px solid rgba(128, 128, 128, 0.7);
+    -webkit-box-shadow: 0 0 0px 1000px #00000003 inset;
+    -webkit-text-fill-color: white !important;
+  }
   .header_logo_title {
     font-size: 38px;
   }
@@ -744,6 +754,7 @@
   .card_four {
     flex-direction: column-reverse;
     align-items: center;
+    overflow-x: hidden;
   }
   .master_questions {
     padding: 72px 20px;
@@ -846,6 +857,9 @@
   }
   .form_input {
     width: 90%;
+    border: 1px solid rgba(128, 128, 128, 0.7);
+    -webkit-box-shadow: 0 0 0px 1000px #00000003 inset;
+    -webkit-text-fill-color: white !important;
   }
   .curve_container {
     width: 200%;
@@ -866,6 +880,7 @@
   .card_three,
   .card_four {
     padding: 12px 0;
+    overflow-x: hidden;
   }
   .card_one_video > video{
     width: 220px;
