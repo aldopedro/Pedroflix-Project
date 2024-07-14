@@ -1,10 +1,10 @@
 import style from "../pages/Registration/register.module.css"
 
-interface Language {
+interface Prop {
     language: string;
 }
 
-function RegistrationFooter(language:Language) {
+function RegistrationFooter(language:Prop) {
 
     function portChange() {
 

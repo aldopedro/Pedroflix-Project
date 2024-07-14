@@ -1,11 +1,11 @@
 import style from "../pages/Registration/register.module.css"
 import { useNavigate } from "react-router-dom"
 
-interface Language {
+interface Prop {
     language: string;
 }
 
-function RegistrationHeader (language:Language) {
+function RegistrationHeader (language:Prop) {
     function backToHome () {
         return navigate ("/Pedroflix-Project/")
     }

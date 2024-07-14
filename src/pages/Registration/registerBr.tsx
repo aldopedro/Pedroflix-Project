@@ -11,7 +11,7 @@ function registerBr() {
     const navigate = useNavigate();
     return (
         <div className={style.master}>
-            <RegistrationHeader/>
+            <RegistrationHeader language="pt"/>
             <section className={style.registerAccount}>
                 <div className={style.devices}></div>
                 <p className={style.step}>PASSO <strong>1</strong> DE <strong>3</strong></p>
@@ -19,7 +19,7 @@ function registerBr() {
                 <h6 className={style.stepDescription}>A Pedroflix é personalizada para você. Crie uma senha para começar a assistir à Pedroflix.</h6>
                 <button className={style.stepButton} onClick={nextStep} >Próximo</button>
             </section>
-            <RegistrationFooter />
+            <RegistrationFooter language="pt"/>
         </div>
     )
 } 

@@ -1,11 +1,11 @@
 import style from "../pages/Registration/register.module.css"
 import { useState } from "react";
 
-interface Language {
+interface Prop {
   language: string;
 }
 
-function RegistrationForm(language:Language) {
+function RegistrationForm(language:Prop) {
   async function validateAll(e: any) {
     if (emailCorrect === 2 && correctBorder === true) {
       e.preventDefault()
