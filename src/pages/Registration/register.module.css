@@ -368,6 +368,7 @@
     .form_email_false,
     .borderPasswordFalse {
         padding: 26px 4% 8px;
+        background-color: transparent;
     }
     .registerAccount{
         padding-bottom: 60px;

@@ -329,6 +329,7 @@
 
   .form_email_true {
     border: 1px solid rgb(43, 184, 113);
+    background-color: transparent;
   }
 
   .form_email_false {
