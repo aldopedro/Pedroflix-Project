@@ -285,7 +285,7 @@
     top: 16px;
     left: 16px;
     pointer-events: none;
-    -webkit-box-shadow: 0 0 0px 1000px white inset;
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset;
   }
 
   .form_label_active {
@@ -300,7 +300,7 @@
     left: 16px;
     font-family: inherit;
     pointer-events: none;
-    -webkit-box-shadow: 0 0 0px 1000px white inset;
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset;
   }
 
   .form_validate_active {
@@ -323,7 +323,7 @@
     border-radius: 4px;
     outline-offset: 2px;
     color: inherit;
-    -webkit-box-shadow: 0 0 0px 1000px white inset;
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset;
   }
 
   .form_email_true_text {
