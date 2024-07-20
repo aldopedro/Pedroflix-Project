@@ -48,7 +48,6 @@ function homeBr() {
                 PEDROFLIX
               </span>
             </div>
-            <div className={style.header_buttons}>
               <div className={style.header_buttons_content}>
                 <div className={style.main_header_language}>
                   <div role="img" aria-hidden="true" className={style.header_language}>
@@ -67,7 +66,6 @@ function homeBr() {
                 </div>
               </div>
             </div>
-          </div>
         </header>
       </div>
       <div className={style.main_background}>

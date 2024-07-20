@@ -53,18 +53,17 @@
   color: #FFF;
 }
 
-html {
-  overflow-x: hidden;
-  background-color: #000;
-}
 
-* {
+
+*,
+html,
+body {
   margin: 0;
   padding: 0;
   border: 0;
 }
 
-@media (max-width: 1920px) {
+@media (max-width: 3000px) {
   .master_header {
     height: 0;
     position: relative;
@@ -86,6 +85,8 @@ html {
     width: calc(100% + 16px);
     justify-content: space-between;
     align-items: center;
+    max-width: 100%;
+    flex-wrap: wrap;
   }
 
   .header_logo {
@@ -101,7 +102,6 @@ html {
 
   .header_buttons_content {
     box-sizing: border-box;
-    width: 100%;
     display: inherit;
     height: auto;
     font-weight: 400;
@@ -191,7 +191,7 @@ html {
   }
 
   .header_login {
-    margin-left: 12px;
+    margin-left: 10px;
     font: inherit;
     display: flex;
     align-items: center;
@@ -414,7 +414,7 @@ html {
     position: relative;
     height: 100px;
     z-index: 1;
-    width: 100%;
+    max-width: 100%;
   }
 
   .curve {
@@ -683,6 +683,7 @@ html {
     color: rgba(255, 255, 255, 0.7);
     font-size: 16px;
     font-weight: 400;
+    padding-top: 20px;
   }
 
   .footer_link {
@@ -737,6 +738,7 @@ html {
   .register_text {
     font-size: 1rem;
     font-weight: 400;
+    text-align: center;
   }
   .form_button {
     font-size: 1.125rem;
@@ -763,7 +765,8 @@ html {
     width: auto;
   }
   .footer_info > li {
-    flex: 0 0 50%
+    flex: 0 0 50%;
+    max-width: 100%;
   }
   .active_icon_mobile,
   .desactive_icon_mobile {
@@ -856,7 +859,7 @@ html {
     padding: 0px 1.5rem 6rem 1.5rem;
   }
   .form_input {
-    width: 90%;
+    width: calc(100% - 34px);
     border: 1px solid rgba(128, 128, 128, 0.7);
     -webkit-box-shadow: 0 0 0px 1000px #00000003 inset;
     -webkit-text-fill-color: white !important;
@@ -868,18 +871,19 @@ html {
   }
   .header_logo {
     margin-left: 0px;
-    margin-right: 6px;
+    margin-right: 16px;
   }
   .card_one_image,
   .card_two_image,
-  .card_three_image {
+  .card_three_image,
+  .card_four_image {
     width: 300px;
   }
   .card_one,
   .card_two,
   .card_three,
   .card_four {
-    padding: 12px 0;
+    padding: 8px 10px;
     overflow-x: hidden;
   }
   .card_one_video > video{
@@ -892,14 +896,21 @@ html {
   .card_two_video > video {
     width: 74%;
   }
-  .card_four_medium_image {
-    width: 480px;
-  }
   .card_four_small_image {
     margin-left: 12px;
   }
   .card_four_content {
-    width: 50%
+    width: 70%;
+    height: 70px;
+    left: 14%;
+  }
+  .card_four_small_image {
+    display: none
+  }
+  .card_four_gif_text,
+  .card_four_gif_title {
+    font-size: 12px;
+    padding-left: 10px;
   }
   .card_one_mp4 {
     width: 220px;
