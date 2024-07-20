@@ -3,10 +3,9 @@ import ReactDOM from 'react-dom/client'
 import HomeBr from "./pages/Home/homeBr.tsx"
 import HomeEn from "./pages/Home/homeEn.tsx"
 import RegisterBr from "./pages/Registration/registerBr.tsx"
-import RegisterFormBr from './pages/Registration/registerFormBr.tsx'
+import RegisterForm from "./pages/Registration/RegistrationForm.tsx"
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import RegisterEn from './pages/Registration/registerEn.tsx'
-import RegisterFormEn from './pages/Registration/registerFormEn.tsx'
 
 const router = createBrowserRouter([
   {
@@ -23,7 +22,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/Pedroflix-Project/register-br/regform",
-    element: <RegisterFormBr />,
+    element: <RegisterForm language='pt'/>,
   },
   {
     path: "/Pedroflix-Project/register-en",
@@ -31,7 +30,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/Pedroflix-Project/register-en/regform",
-    element: <RegisterFormEn />
+    element: <RegisterForm language='en' />
   },
 ]);
 
