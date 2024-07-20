@@ -7,22 +7,23 @@ interface Prop {
 
 function RegistrationForm(language:Prop) {
   async function validateAll(e: any) {
-    if (emailCorrect === 2 && correctBorder === true) {
-      e.preventDefault()
-      fetch('http://localhost:8081/add_user', {
-        method: 'POST',
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(user)
-      }).then(() => { })
-    }
     e.preventDefault()
+    if (emailCorrect === 2 && correctBorder === true) {
+      const result = await fetch('http://localhost:8081/add_user', {
+        method: 'POST',
+        headers: {"Content-Type": "application/json", "Acess-Control-Allow-Origin": "http://localhost:5173"},
+        body: JSON.stringify(user)
+        
+      }).then()
+      console.log(await result.json())
+    }
   }
 
   function validateEmail(email: string) {
     const validate = new RegExp(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)
     if (!validate.test(email)) {
       setEmailValue(email);
-      setUser({ ...user, email: emailValue, password: password })
+      setUser({ ...user, password: password, email: emailValue})
       setEmailCorrect(1);
       return 1;
     } else {
@@ -51,6 +52,7 @@ function RegistrationForm(language:Prop) {
     if (validateUppercase.test(password) && validateLowercase.test(password) && validateNumber.test(password)) {
       setCorrectBorder(true)
       setPassword(password)
+      setUser({...user, password: password})
       return true
     }
     setPassword(password)

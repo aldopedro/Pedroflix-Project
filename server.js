@@ -34,8 +34,9 @@ app.post('/add_user', async (req, res) => {
             const validateEmail = result
             if (validateEmail[0] === undefined) {
                 con.query(`INSERT INTO user (email, password) VALUES (?, ?)`, [email, password])
+                return res.json("email cadastrado")
            }
-            else console.log("email já cadastrado")
+            else return res.json("email já cadastrado")
         })
     }
 })
