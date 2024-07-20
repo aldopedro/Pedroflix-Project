@@ -22,15 +22,15 @@ const router = createBrowserRouter([
     element: <RegisterBr />,
   },
   {
-    path: "Pedroflix-Project/register-br/regform",
+    path: "/Pedroflix-Project/register-br/regform",
     element: <RegisterFormBr />,
   },
   {
-    path: "Pedroflix-Project/register-en",
+    path: "/Pedroflix-Project/register-en",
     element: <RegisterEn />
   },
   {
-    path: "Pedroflix-Project/register-en/regform",
+    path: "/Pedroflix-Project/register-en/regform",
     element: <RegisterFormEn />
   },
 ]);

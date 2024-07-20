@@ -17,7 +17,7 @@ function registerFormBr() {
                     <RegistrationForm language="en"/>
                 </div>
             </section>
-            <RegistrationFooter language="en"/>
+            <RegistrationFooter language="en" languageStep="pt2"/>
         </div>
     )
 }

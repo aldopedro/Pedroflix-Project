@@ -16,10 +16,10 @@ function registerEn() {
                 <div className={style.devices}></div>
                 <p className={style.step}>PASSO <strong>1</strong> DE <strong>3</strong></p>
                 <h4 className={style.stepTitle}>Finish setting up your account</h4>
-                <h6 className={style.stepDescription}>Netflix is personalized for you. Create a password to start watching Netflix.</h6>
+                <h6 className={style.stepDescription}>Netflix is personalized for you. Create a password to start watching <br/>Pedroflix.</h6>
                 <button className={style.stepButton} onClick={nextStep} >Next</button>
             </section>
-            <RegistrationFooter language="en"/>
+            <RegistrationFooter language="en" languageStep="pt1"/>
         </div>
     )
 } 
