@@ -84,8 +84,13 @@ function RegistrationForm(language: Prop) {
     return (
       <div>
         <RegistrationHeader language="pt" />
-        <div className={emailExist === "trueMail" ? style.displayNone : style.displayAuto}>
-          EMAIL JA CADASTRADO
+        <div className={emailExist === "true" ? style.displayNone : style.displayAuto}>
+          <div className={style.mainAlert}>
+            <div className={style.emailExist}>
+              <svg className={style.alertIcon} xmlns="http://www.w3.org/2000/svg" fill="none" width="40" height="24" viewBox="0 0 24 24" role="img" data-icon="WarningFillStandard" data-uia="UIMessage-content+icon" aria-hidden="true"><path fillRule="evenodd" clipRule={"evenodd"} d="M13.7306 2.99377C12.9603 1.66321 11.0392 1.66322 10.2689 2.9938L1.00357 18.9979C0.231657 20.3313 1.19377 22 2.73443 22H21.2655C22.8062 22 23.7683 20.3312 22.9964 18.9979L13.7306 2.99377ZM13.5002 9H10.5002L11.0002 14H13.0002L13.5002 9ZM12.0002 16C12.8287 16 13.5002 16.6716 13.5002 17.5C13.5002 18.3284 12.8287 19 12.0002 19C11.1718 19 10.5002 18.3284 10.5002 17.5C10.5002 16.6716 11.1718 16 12.0002 16Z" fill="currentColor"></path></svg>
+              <div><strong>Parece que essa conta já existe.</strong><a className={style.loginAlert} href="/login"> Acesse essa conta</a> ou tente usar outro email.</div>
+            </div>
+          </div>
         </div>
         <section className={style.registerAccount}>
           <div className={style.register}>

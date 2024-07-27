@@ -348,6 +348,36 @@
     max-width: 440px;
 }
 
+.displayAuto {
+    display: none;
+}
+
+.displayNone {
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.mainAlert {
+    padding: 16px;
+    background-color: rgb(216, 157, 49);
+    border-radius: 4px;
+}
+
+.loginAlert {
+    color: black;
+}
+
+.emailExist {
+    max-width: 406px;
+    display: flex;
+    align-items: center;
+}
+
+.alertIcon {
+    margin-right: 18px;
+}
+
 @media (max-width:480px) {
     .headerTitle{
         font-size: 52px;
