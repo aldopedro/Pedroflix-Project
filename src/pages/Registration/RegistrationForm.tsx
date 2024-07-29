@@ -15,7 +15,7 @@ function RegistrationForm(language: Prop) {
     if (emailCorrect === 2 && correctBorder === true) {
       const result = await fetch('http://localhost:8081/add_user', {
         method: 'POST',
-        headers: { "Content-Type": "application/json", "Acess-Control-Allow-Origin": "http://localhost:5173" },
+        headers: { "Content-Type": "application/json", "Acess-Control-Allow-Origin": "http://localhost:5173 https://aldopedro.github.io/Pedroflix-Project/register-br/regform", },
         body: JSON.stringify(user)
       }).then()
       setEmailExist(await result.json())
