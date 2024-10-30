@@ -63,6 +63,11 @@ body {
   border: 0;
 }
 
+html,
+body {
+  background-color: #000;
+}
+
 @media (max-width: 3000px) {
   .master_header {
     height: 0;
@@ -462,6 +467,7 @@ body {
     justify-content: center;
     padding-bottom: 72px;
     border-bottom: 8px solid rgb(35, 35, 35);
+    max-width: 100%;
   }
 
   .card_info {
@@ -490,6 +496,7 @@ body {
   .card_two_image {
     position: relative;
     z-index: 1;
+    max-width: 100%;
   }
 
   .card_one_video {
@@ -708,35 +715,52 @@ body {
   }
 }
 
-@media (max-width:1280px) {
+@media (max-width:1600px) {
+  .questions_subtitle,
+  .questions_button {
+    padding: 14px;
+  }
+  .card_three_image {
+    max-width: 100%;
+  }
+  .master_register {
+    top: 22%;
+    max-width: 610px;
+  }
   .form_input {
     border: 1px solid rgba(128, 128, 128, 0.7);
     -webkit-box-shadow: 0 0 0px 1000px #00000003 inset;
     -webkit-text-fill-color: white !important;
   }
+  .main_curve {
+    height: 0px;
+  }
+  .curve_container {
+    left: -30%;
+    top: -100px;
+    height: 200px;
+    width: 170%;
+  }
   .header_logo_title {
-    font-size: 38px;
+    font-size: 50px;
   }
   .active_icon, 
   .desactive_icon {
     display: none;
   }
-  .master_register {
-    max-width: 508px;
-  }
   .register_title,
   .card_title {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     font-weight: 700;
     text-align: center;
   }
   .card_text {
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: 400;
     text-align: center;
   }
   .register_text {
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: 400;
     text-align: center;
   }
@@ -781,7 +805,7 @@ body {
     margin-top: -100px;
   }
   .main_register {
-    padding: 0px 10px;
+    padding: 0px 26px;
   }
 }
 @media (max-width: 600px) {

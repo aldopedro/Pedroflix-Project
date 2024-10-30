@@ -20,7 +20,7 @@ const corsOptions = {
 app.use(cors(corsOptions))
 
 app.get('/', (req, res) => {
-    con.query("SELECT * FROM user", (err, result) => {
+    con.query("SELECT * FROM users", (err, result) => {
         res.send(result);
     })
 })
@@ -30,10 +30,10 @@ app.post('/add_user', async (req, res) => {
     const email = req.body.email
     const password = req.body.password
     if (emailRegex.test(email)) {
-        con.query(`SELECT * FROM user WHERE email = ?`, [email], (err, result) => {
+        con.query(`SELECT * FROM users WHERE email = ?`, [email], (err, result) => {
             const validateEmail = result
-            if (validateEmail[0] === undefined) {
-                con.query(`INSERT INTO user (email, password) VALUES (?, ?)`, [email, password])
+            if (validateEmail === undefined) {
+                con.query(`INSERT INTO users (email, password) VALUES (?, ?)`, [email, password])
                 return res.json("false")
            }
             else return res.json("true")
